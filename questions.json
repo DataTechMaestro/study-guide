@@ -1,0 +1,21 @@
+[
+    {
+        "question": "Office buildings and retail space are examples of",
+        "answers": [
+            {"text": "commercial real estate.", "correct": true, "explanation": "Commercial real estate refers to properties used for business purposes."},
+            {"text": "special use real estate.", "correct": false, "explanation": "Special use real estate includes properties like schools and churches."},
+            {"text": "residential property.", "correct": false, "explanation": "Residential properties are used for housing."},
+            {"text": "industrial property.", "correct": false, "explanation": "Industrial properties are used for manufacturing and production."}
+        ]
+    },
+    {
+        "question": "The market value of a property less the amount still owed on it is the owner’s",
+        "answers": [
+            {"text": "purchase price.", "correct": false, "explanation": "Purchase price is the amount paid to buy the property."},
+            {"text": "equity.", "correct": true, "explanation": "Equity is the owner's interest in the property after deducting liabilities."},
+            {"text": "depreciation.", "correct": false, "explanation": "Depreciation is the reduction in value of the property over time."},
+            {"text": "tax deduction.", "correct": false, "explanation": "Tax deduction refers to expenses that can be deducted to reduce taxable income."}
+        ]
+    }
+    // Add more questions here
+]
