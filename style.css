@@ -57,6 +57,7 @@ body {
 .btn[disabled] {
     cursor: not-allowed;
 }
+
 .explanation {
     margin-top: 20px;
     font-size: 14px;
