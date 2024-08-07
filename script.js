@@ -4,7 +4,28 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 
-let questions = [];
+const questions = [
+    {
+        question: 'Office buildings and retail space are examples of',
+        answers: [
+            { text: 'commercial real estate.', correct: true },
+            { text: 'special use real estate.', correct: false },
+            { text: 'residential property.', correct: false },
+            { text: 'industrial property.', correct: false }
+        ]
+    },
+    {
+        question: 'The market value of a property less the amount still owed on it is the owner’s',
+        answers: [
+            { text: 'purchase price.', correct: false },
+            { text: 'equity.', correct: true },
+            { text: 'depreciation.', correct: false },
+            { text: 'tax deduction.', correct: false }
+        ]
+    }
+    // Add more questions as needed
+];
+
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener('click', startGame);
@@ -13,22 +34,12 @@ nextButton.addEventListener('click', () => {
     setNextQuestion();
 });
 
-async function startGame() {
+function startGame() {
     startButton.classList.add('hide');
-    questions = await fetchQuestions();
     shuffledQuestions = questions.sort(() => Math.random() - .5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
-}
-
-async function fetchQuestions() {
-    try {
-        const response = await fetch('questions.json');
-        return await response.json();
-    } catch (error) {
-        console.error('Failed to load questions:', error);
-    }
 }
 
 function setNextQuestion() {
@@ -42,7 +53,6 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = answer.text;
         button.classList.add('btn');
-        button.dataset.explanation = answer.explanation;
         if (answer.correct) {
             button.dataset.correct = answer.correct;
         }
@@ -62,13 +72,11 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
-    const explanation = selectedButton.dataset.explanation;
     setStatusClass(selectedButton, correct);
     Array.from(answerButtonsElement.children).forEach(button => {
         setStatusClass(button, button.dataset.correct === 'true');
         button.disabled = true; // Disable all buttons after an answer is selected
     });
-    showExplanation(explanation);
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
@@ -89,11 +97,4 @@ function setStatusClass(element, correct) {
 function clearStatusClass(element) {
     element.classList.remove('correct');
     element.classList.remove('wrong');
-}
-
-function showExplanation(explanation) {
-    const explanationElement = document.createElement('div');
-    explanationElement.innerText = explanation;
-    explanationElement.classList.add('explanation');
-    questionContainerElement.appendChild(explanationElement);
 }
