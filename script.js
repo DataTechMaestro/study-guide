@@ -108,6 +108,7 @@ const questions = [
         "answer": "b. A shortage of skilled labor will affect the supply of real estate, and this labor shortage is not \ngenerally associated with governmental policies."
     }
 ];
+
 let shuffledQuestions, currentQuestionIndex;
 
 startButton.addEventListener('click', startGame);
@@ -117,9 +118,8 @@ nextButton.addEventListener('click', () => {
 });
 
 function startGame() {
-    console.log("Game started"); // Debugging line
     startButton.classList.add('hide');
-    shuffledQuestions = questions.sort(() => Math.random() - .5);
+    shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
@@ -131,16 +131,15 @@ function setNextQuestion() {
 }
 
 function showQuestion(question) {
-    console.log('Showing question:', question); // Debugging line
     questionElement.innerText = question.question;
     question.choices.forEach(choice => {
         const button = document.createElement('button');
         button.innerText = choice;
         button.classList.add('btn');
-        if (choice[0] === question.answer) {
+        if (choice === question.answer) {
             button.dataset.correct = true;
         }
-        button.dataset.explanation = `Explanation for ${choice}`;
+        button.dataset.explanation = `Correct answer: ${question.answer}`;
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
