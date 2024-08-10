@@ -55,8 +55,7 @@ const questions = [
             "a. specializations directly linked to state and federal government financial policies.",
             "b. separate professions within the real estate industry.",
             "c. real estate brokerage professions.",
-            "d. demographic factors that affect demand for real property in a commercial market.",
-            "c."
+            "d. demographic factors that affect demand for real property in a commercial market."
         ],
         "answer": "b. Property management, appraisal, financing, and development are not linked to the \ngovernment; they are all linked to real estate business."
     },
