@@ -4,7 +4,9 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const explanationContainerElement = document.getElementById('explanation-container');
+const resultsContainerElement = document.getElementById('results');
 const toggleAnswersCheckbox = document.getElementById('toggle-answers');
+const toggleResultsCheckbox = document.getElementById('toggle-results');
 
 const questions = [
     {
@@ -112,6 +114,7 @@ const questions = [
 
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
+let userAnswers = [];
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -124,7 +127,9 @@ function startGame() {
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     score = 0;
+    userAnswers = [];
     questionContainerElement.classList.remove('hide');
+    resultsContainerElement.classList.add('hide');
     setNextQuestion();
 }
 
@@ -139,9 +144,12 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = choice;
         button.classList.add('btn');
-        if (choice === question.answer) {
+
+        // Set data attributes for correct answers and explanations
+        if (choice[0] === question.answer[0]) {
             button.dataset.correct = true;
         }
+
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
@@ -160,20 +168,36 @@ function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
 
-    // Highlight the selected answer
-    setStatusClass(selectedButton, correct);
+    // Record user's answer
+    userAnswers.push({
+        question: shuffledQuestions[currentQuestionIndex].question,
+        correct: correct,
+        selectedAnswer: selectedButton.innerText,
+        correctAnswer: shuffledQuestions[currentQuestionIndex].answer
+    });
 
-    // Show the correct answer if the toggle is on
-    if (toggleAnswersCheckbox.checked) {
-        Array.from(answerButtonsElement.children).forEach(button => {
-            if (button.dataset.correct) {
-                setStatusClass(button, true);
-            }
-            button.disabled = true;  // Disable all buttons after selection
-        });
-        showExplanation(selectedButton);
+    // Check if real-time results are enabled
+    if (!toggleResultsCheckbox.checked) {
+        // Highlight the user's selection
+        setStatusClass(selectedButton, correct);
+
+        // Highlight the correct answer if showing answers after each question is enabled
+        if (toggleAnswersCheckbox.checked) {
+            Array.from(answerButtonsElement.children).forEach(button => {
+                if (button.dataset.correct) {
+                    setStatusClass(button, true);
+                }
+                button.disabled = true;  // Disable all buttons after selection
+            });
+            showExplanation(selectedButton);
+        } else {
+            // Disable all buttons after selection without showing results
+            Array.from(answerButtonsElement.children).forEach(button => {
+                button.disabled = true;
+            });
+        }
     } else {
-        // If the toggle is off, just disable all buttons and move to next question
+        // If results are shown at the end, just disable all buttons
         Array.from(answerButtonsElement.children).forEach(button => {
             button.disabled = true;
         });
@@ -183,14 +207,46 @@ function selectAnswer(e) {
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        startButton.innerText = 'Restart';
+        startButton.innerText = 'Show Results';
         startButton.classList.remove('hide');
+        startButton.removeEventListener('click', startGame);
+        startButton.addEventListener('click', showResults);
     }
 }
 
-function showExplanation(button) {
-    explanationContainerElement.innerText = button.dataset.explanation;
-    explanationContainerElement.classList.remove('hide');
+function showResults() {
+    questionContainerElement.classList.add('hide');
+    nextButton.classList.add('hide');
+    resultsContainerElement.classList.remove('hide');
+
+    resultsContainerElement.innerHTML = `<h2>Quiz Results</h2>`;
+    userAnswers.forEach((answer, index) => {
+        const resultDiv = document.createElement('div');
+        resultDiv.classList.add('result');
+
+        const questionText = document.createElement('p');
+        questionText.innerText = `Question ${index + 1}: ${answer.question}`;
+        resultDiv.appendChild(questionText);
+
+        const userAnswerText = document.createElement('p');
+        userAnswerText.innerText = `Your Answer: ${answer.selectedAnswer}`;
+        userAnswerText.classList.add(answer.correct ? 'correct' : 'wrong');
+        resultDiv.appendChild(userAnswerText);
+
+        if (!answer.correct) {
+            const correctAnswerText = document.createElement('p');
+            correctAnswerText.innerText = `Correct Answer: ${answer.correctAnswer}`;
+            correctAnswerText.classList.add('correct');
+            resultDiv.appendChild(correctAnswerText);
+        }
+
+        resultsContainerElement.appendChild(resultDiv);
+    });
+
+    // Reset the start button to start the quiz again
+    startButton.innerText = 'Restart Quiz';
+    startButton.addEventListener('click', startGame);
+    startButton.removeEventListener('click', showResults);
 }
 
 function setStatusClass(element, correct) {
