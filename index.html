@@ -3,26 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive Study Guide</title>
+    <title>Study Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="container">
-        <h1>Interactive Study Guide</h1>
-
-        <!-- Start Screen -->
-        <div id="start-screen">
-            <p>Test your knowledge with this interactive quiz!</p>
-            <button id="start-quiz">Start Quiz</button>
+    <div class="container">
+        <h1>Study Guide</h1>
+        <div id="question-container" class="hide">
+            <div id="question">Question</div>
+            <div id="answer-buttons" class="btn-container"></div>
+            <div id="explanation-container" class="explanation-container hide"></div>
         </div>
-
-        <!-- Quiz Container -->
-        <div id="quiz-container" style="display: none;"></div>
-        <div id="results" style="display: none;"></div>
-
-        <button id="next-question" style="display: none;">Next Question</button>
+        <div id="start-btn" class="start-btn btn">Start</div>
+        <div id="next-btn" class="next-btn btn hide">Next</div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>

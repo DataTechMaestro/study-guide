@@ -1,99 +1,59 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    background-color: #f0f0f0;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
-#container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background-color: white;
+.container {
+    background: white;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
+    padding: 20px;
+    width: 300px;
     text-align: center;
-    color: #333;
 }
 
-#start-screen {
-    text-align: center;
-    margin-top: 50px;
-}
-
-#start-quiz {
+.btn {
+    margin: 5px;
     padding: 10px 20px;
-    font-size: 18px;
-    background-color: #008080;
-    color: white;
     border: none;
     border-radius: 5px;
+    background: #007bff;
+    color: white;
     cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-#start-quiz:hover {
-    background-color: #006666;
+.btn:hover {
+    background: #0056b3;
 }
 
-#quiz-container {
-    margin-bottom: 20px;
-}
-
-.question {
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.choices {
-    list-style-type: none;
-    padding: 0;
-}
-
-.choices li {
-    padding: 10px;
-    margin-bottom: 5px;
-    background-color: #e0e0e0;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.choices li:hover {
-    background-color: #d0d0d0;
-}
-
-.choices li.correct {
-    background-color: #8fbc8f;
-}
-
-.choices li.incorrect {
-    background-color: #f08080;
-}
-
-#results {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-top: 20px;
+.hide {
     display: none;
-    text-align: center;
 }
 
-#next-question {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #008080;
+.btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.start-btn, .next-btn {
+    width: 100%;
+}
+
+.correct {
+    background-color: green;
     color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
 }
 
-#next-question:hover {
-    background-color: #006666;
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+.btn[disabled] {
+    cursor: not-allowed;
 }
