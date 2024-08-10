@@ -4,6 +4,7 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const explanationContainerElement = document.getElementById('explanation-container');
+const toggleAnswersCheckbox = document.getElementById('toggle-answers');
 
 const questions = [
     {
@@ -110,6 +111,7 @@ const questions = [
 ];
 
 let shuffledQuestions, currentQuestionIndex;
+let score = 0;
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -121,6 +123,7 @@ function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
+    score = 0;
     questionContainerElement.classList.remove('hide');
     setNextQuestion();
 }
@@ -139,14 +142,12 @@ function showQuestion(question) {
         if (choice === question.answer) {
             button.dataset.correct = true;
         }
-        button.dataset.explanation = `Correct answer: ${question.answer}`;
         button.addEventListener('click', selectAnswer);
         answerButtonsElement.appendChild(button);
     });
 }
 
 function resetState() {
-    clearStatusClass(document.body);
     nextButton.classList.add('hide');
     explanationContainerElement.classList.add('hide');
     explanationContainerElement.innerText = '';
@@ -158,12 +159,27 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
+
+    // Highlight the selected answer
     setStatusClass(selectedButton, correct);
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct === 'true');
-        button.disabled = true;
-    });
-    showExplanation(selectedButton);
+
+    // Show the correct answer if the toggle is on
+    if (toggleAnswersCheckbox.checked) {
+        Array.from(answerButtonsElement.children).forEach(button => {
+            if (button.dataset.correct) {
+                setStatusClass(button, true);
+            }
+            button.disabled = true;  // Disable all buttons after selection
+        });
+        showExplanation(selectedButton);
+    } else {
+        // If the toggle is off, just disable all buttons and move to next question
+        Array.from(answerButtonsElement.children).forEach(button => {
+            button.disabled = true;
+        });
+    }
+
+    // Show the next button or finish the quiz
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
