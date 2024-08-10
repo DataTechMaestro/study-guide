@@ -136,6 +136,7 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = choice;
         button.classList.add('btn');
+        button.style.backgroundColor = 'white';  // Set default background to white
         if (choice === question.answer) {
             button.dataset.correct = true;
         }
@@ -178,15 +179,13 @@ function showExplanation(button) {
 }
 
 function setStatusClass(element, correct) {
-    clearStatusClass(element);
     if (correct) {
-        element.classList.add('correct');
+        element.style.backgroundColor = 'green';
     } else {
-        element.classList.add('wrong');
+        element.style.backgroundColor = 'red';
     }
 }
 
 function clearStatusClass(element) {
-    element.classList.remove('correct');
-    element.classList.remove('wrong');
+    element.style.backgroundColor = '';
 }
