@@ -3,20 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Study Guide</title>
+    <title>Interactive Study Guide</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <h1>Study Guide</h1>
+
+        <!-- Toggle to choose when to show answers -->
+        <label>
+            <input type="checkbox" id="toggle-answers">
+            Show answers after each question
+        </label>
+
+        <!-- Start Screen -->
+        <div id="start-screen">
+            <button id="start-btn" class="start-btn btn">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Container -->
         <div id="question-container" class="hide">
             <div id="question">Question</div>
             <div id="answer-buttons" class="btn-container"></div>
             <div id="explanation-container" class="explanation-container hide"></div>
         </div>
-        <div id="start-btn" class="start-btn btn">Start</div>
-        <div id="next-btn" class="next-btn btn hide">Next</div>
+
+        <!-- Next Button -->
+        <button id="next-btn" class="next-btn btn hide">Next Question</button>
+
+        <!-- Result Screen -->
+        <div id="results" class="hide"></div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

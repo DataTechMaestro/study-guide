@@ -4,6 +4,8 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const explanationContainerElement = document.getElementById('explanation-container');
+const resultsContainerElement = document.getElementById('results');
+const toggleAnswersCheckbox = document.getElementById('toggle-answers');
 
 const questions = [
     {
@@ -110,6 +112,7 @@ const questions = [
 ];
 
 let shuffledQuestions, currentQuestionIndex;
+let score = 0;
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -121,7 +124,9 @@ function startGame() {
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
+    score = 0;
     questionContainerElement.classList.remove('hide');
+    resultsContainerElement.classList.add('hide');
     setNextQuestion();
 }
 
@@ -136,7 +141,7 @@ function showQuestion(question) {
         const button = document.createElement('button');
         button.innerText = choice;
         button.classList.add('btn');
-        button.style.backgroundColor = 'white';  // Set default background to white
+        button.style.backgroundColor = 'black';  // Default to white
         if (choice === question.answer) {
             button.dataset.correct = true;
         }
@@ -159,17 +164,38 @@ function resetState() {
 function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
-    setStatusClass(selectedButton, correct);
-    Array.from(answerButtonsElement.children).forEach(button => {
-        setStatusClass(button, button.dataset.correct === 'true');
-        button.disabled = true;
-    });
-    showExplanation(selectedButton);
-    if (shuffledQuestions.length > currentQuestionIndex + 1) {
-        nextButton.classList.remove('hide');
+    if (correct) {
+        score++;
+    }
+
+    if (toggleAnswersCheckbox.checked) {
+        // Show answers immediately
+        setStatusClass(selectedButton, correct);
+        Array.from(answerButtonsElement.children).forEach(button => {
+            setStatusClass(button, button.dataset.correct === 'true');
+            button.disabled = true;
+        });
+        showExplanation(selectedButton);
+
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide');
+        } else {
+            startButton.innerText = 'Restart';
+            startButton.classList.remove('hide');
+        }
     } else {
-        startButton.innerText = 'Restart';
-        startButton.classList.remove('hide');
+        // Move to next question without revealing the answer
+        Array.from(answerButtonsElement.children).forEach(button => {
+            button.disabled = true;
+        });
+
+        if (shuffledQuestions.length > currentQuestionIndex + 1) {
+            nextButton.classList.remove('hide');
+        } else {
+            startButton.innerText = 'Show Results';
+            startButton.classList.remove('hide');
+            startButton.addEventListener('click', showResults);
+        }
     }
 }
 
@@ -188,4 +214,11 @@ function setStatusClass(element, correct) {
 
 function clearStatusClass(element) {
     element.style.backgroundColor = '';
+}
+
+function showResults() {
+    questionContainerElement.classList.add('hide');
+    nextButton.classList.add('hide');
+    resultsContainerElement.classList.remove('hide');
+    resultsContainerElement.innerText = `You scored ${score} out of ${shuffledQuestions.length} correct!`;
 }
