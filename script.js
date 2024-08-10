@@ -9,6 +9,7 @@ const toggleAnswersCheckbox = document.getElementById('toggle-answers');
 const toggleResultsCheckbox = document.getElementById('toggle-results');
 
 const questions = [
+[
     {
         "question": "1. Office buildings and retail space are examples of",
         "choices": [
@@ -208,7 +209,7 @@ function selectAnswer(e) {
     } else {
         startButton.innerText = 'Show Results';
         startButton.classList.remove('hide');
-        startButton.removeEventListener('click', startGame);
+        startButton.removeEventListener('click', startGame);  // Ensure only one event listener is active
         startButton.addEventListener('click', showResults);
     }
 }
@@ -244,8 +245,8 @@ function showResults() {
 
     // Reset the start button to start the quiz again
     startButton.innerText = 'Restart Quiz';
+    startButton.removeEventListener('click', showResults);  // Ensure only one event listener is active
     startButton.addEventListener('click', startGame);
-    startButton.removeEventListener('click', showResults);
 }
 
 function setStatusClass(element, correct) {
