@@ -3,30 +3,39 @@ document.addEventListener('DOMContentLoaded', () => {
     let score = 0;
     let totalQuestions = 0;
 
-    // Fetch the JSON file
-    fetch('questions.json')
-        .then(response => response.json())
-        .then(data => {
-            totalQuestions = data.length;
-            displayQuestion(data[currentQuestionIndex]);
+    const startScreen = document.getElementById('start-screen');
+    const quizContainer = document.getElementById('quiz-container');
+    const nextButton = document.getElementById('next-question');
+    const resultsContainer = document.getElementById('results');
 
-            const nextButton = document.getElementById('next-question');
-            nextButton.addEventListener('click', () => {
-                currentQuestionIndex++;
-                if (currentQuestionIndex < totalQuestions) {
-                    resetState();
-                    displayQuestion(data[currentQuestionIndex]);
-                } else {
-                    showResults();
-                }
+    document.getElementById('start-quiz').addEventListener('click', startQuiz);
+
+    function startQuiz() {
+        startScreen.style.display = 'none';
+        quizContainer.style.display = 'block';
+
+        fetch('questions.json')
+            .then(response => response.json())
+            .then(data => {
+                totalQuestions = data.length;
+                displayQuestion(data[currentQuestionIndex]);
+
+                nextButton.addEventListener('click', () => {
+                    currentQuestionIndex++;
+                    if (currentQuestionIndex < totalQuestions) {
+                        resetState();
+                        displayQuestion(data[currentQuestionIndex]);
+                    } else {
+                        showResults();
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('There was a problem with the fetch operation:', error);
             });
-        })
-        .catch(error => {
-            console.error('There was a problem with the fetch operation:', error);
-        });
+    }
 
     function displayQuestion(questionObj) {
-        const quizContainer = document.getElementById('quiz-container');
         quizContainer.innerHTML = '';
 
         const questionElement = document.createElement('div');
@@ -68,18 +77,15 @@ document.addEventListener('DOMContentLoaded', () => {
             item.classList.add('disabled');
         });
 
-        document.getElementById('next-question').style.display = 'block';
+        nextButton.style.display = 'block';
     }
 
     function resetState() {
-        document.getElementById('next-question').style.display = 'none';
+        nextButton.style.display = 'none';
     }
 
     function showResults() {
-        const quizContainer = document.getElementById('quiz-container');
-        const resultsContainer = document.getElementById('results');
-
-        quizContainer.innerHTML = '';
+        quizContainer.style.display = 'none';
         resultsContainer.style.display = 'block';
         resultsContainer.textContent = `You scored ${score} out of ${totalQuestions}`;
     }
