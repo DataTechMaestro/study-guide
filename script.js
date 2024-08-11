@@ -11,314 +11,6 @@ const resultsElement = document.getElementById('results');
 
 const questions = [
     {
-        "question": "1. Office buildings and retail space are examples of",
-        "choices": [
-            "a. commercial real estate.",
-            "b. special use real estate.",
-            "c. residential property.",
-            "d. industrial property."
-        ],
-        "answer": "a. Office buildings and retail space are examples of commercial real estate. Special use property \nincludes churches and dormitories; industrial property includes warehouses and factories."
-    },
-    {
-        "question": "2. The market value of a property less the amount still owed on it is the owner\u2019s",
-        "choices": [
-            "a. purchase price.",
-            "b. equity.",
-            "c. depreciation.",
-            "d. tax deduction."
-        ],
-        "answer": "b. A property owner\u2019s equity is the amount remaining after subtracting any outstanding loans \nagainst the property from its original purchase price."
-    },
-    {
-        "question": "3. All of these factors will tend to affect demand for real estate EXCEPT",
-        "choices": [
-            "a. transfer taxes.",
-            "b. employment levels.",
-            "c. wage rates.",
-            "d. demographics."
-        ],
-        "answer": "a. Transfer taxes affect the supply of real estate; employment levels, wage rates, and \ndemographics affect demand for real estate."
-    },
-    {
-        "question": "4. When the population of a town suddenly increases, which of these is MOST likely to occur?",
-        "choices": [
-            "a. Rental rates will fall due to increased competition",
-            "b. Demand for housing will decrease",
-            "c. New housing starts will decrease",
-            "d. Real estate prices will increase"
-        ],
-        "answer": "d. With a sudden influx of people, rental rates will increase; demand for housing will increase; \nand more new homes will be started to satisfy demand."
-    },
-    {
-        "question": "5. Property management, appraisal, financing, and development are all",
-        "choices": [
-            "a. specializations directly linked to state and federal government financial policies.",
-            "b. separate professions within the real estate industry.",
-            "c. real estate brokerage professions.",
-            "d. demographic factors that affect demand for real property in a commercial market.",
-            "c."
-        ],
-        "answer": "b. Property management, appraisal, financing, and development are not linked to the \ngovernment; they are all linked to real estate business."
-    },
-    {
-        "question": "6. The idea that no two parcels of land are exactly alike is called",
-        "choices": [
-            "a. immobility.",
-            "b. subdivision.",
-            "c. uniqueness.",
-            "d. location."
-        ],
-        "answer": "c. No matter how identical they may appear, no two parcels of real estate are ever exactly alike; \neach occupies its own unique geographic location."
-    },
-    {
-        "question": "7. All of these factors can affect the supply of real estate EXCEPT",
-        "choices": [
-            "a. demographics.",
-            "b. labor force.",
-            "c. construction costs.",
-            "d. government controls."
-        ],
-        "answer": "a. Demographics affect the demand for real estate. The labor force, construction costs, and \ngovernment controls affect the supply of real estate."
-    },
-    {
-        "question": "8. A property owner who does not want to deal with the everyday tasks of managing a rental \nproperty can hire",
-        "choices": [
-            "a. a property manager.",
-            "b. an appraiser.",
-            "c. a home inspector.",
-            "d. a developer."
-        ],
-        "answer": "a. A property manager handles the day-to-day tasks of managing property for an owner. An \nappraiser provides an opinion of value; a home inspector looks for problems with the \nproperty; and the developer improves the property."
-    },
-    {
-        "question": "9. When the supply of a certain commodity decreases while demand remains the same, the price \nof that commodity will tend to",
-        "choices": [
-            "a. remain the same.",
-            "b. increase.",
-            "c. decrease by 10%.",
-            "d. decrease by 20%."
-        ],
-        "answer": "b. When consumers continue to demand a product for which there is limited supply, the price \ngenerally increases. \n \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
-    },
-    {
-        "question": "0. A factor affecting the real estate market that usually is not the result of government controls is",
-        "choices": [
-            "a. the Federal Reserve Board\u2019s discount rate.",
-            "b. a shortage of skilled labor or building materials.",
-            "c. land-use controls, such as zoning.",
-            "d. federal environmental regulations."
-        ],
-        "answer": "b. A shortage of skilled labor will affect the supply of real estate, and this labor shortage is not \ngenerally associated with governmental policies."
-    },
-    {
-        "question": "1. Land, mineral, and air rights in the land are included in the definition of",
-        "choices": [
-            "a. attachments.",
-            "b. real property.",
-            "c. subsurface rights.",
-            "d. improvements."
-        ],
-        "answer": "b. Subsurface rights and improvements are included in the definition of real estate. Real \nproperty also includes rights and privileges."
-    },
-    {
-        "question": "2. Which of these is an example of an economic characteristic of land?",
-        "choices": [
-            "a. Immobility",
-            "b. Indestructibility",
-            "c. Uniqueness",
-            "d. Scarcity"
-        ],
-        "answer": "d. Immobility, indestructibility, and uniqueness are physical characteristics, while scarcity is an \neconomic characteristic."
-    },
-    {
-        "question": "3. Another word for uniqueness is",
-        "choices": [
-            "a. scarcity.",
-            "b. nonhomogeneity.",
-            "c. fructus industrials.",
-            "d. immobility."
-        ],
-        "answer": "b. Uniqueness, or nonhomogeneity, indicates that no two parcels of land are alike."
-    },
-    {
-        "question": "4. The bundle of rights includes",
-        "choices": [
-            "a. taxation.",
-            "b. transportation.",
-            "c. expansion.",
-            "d. exclusion."
-        ],
-        "answer": "d. The bundle of rights includes possession, control, exclusion, enjoyment, and disposition. There \nis no right to expansion, except by acquiring another parcel."
-    },
-    {
-        "question": "5. Owners with littoral rights enjoy",
-        "choices": [
-            "a. unrestricted use of available waters, but they own the land adjacent to the water only as",
-            "b. the right of disposition.",
-            "c. unrestricted use of the surface of the earth.",
-            "d. unrestricted rights to the use of fixtures.",
-            "c."
-        ],
-        "answer": "a. Owners of littoral rights enjoy unrestricted use of available waters, but own the land adjacent \nto the water only as far as the average high-water mark."
-    },
-    {
-        "question": "6. Growing trees, fences, and buildings are all considered",
-        "choices": [
-            "a. chattels.",
-            "b. land.",
-            "c. fixtures.",
-            "d. real estate."
-        ],
-        "answer": "d. The definition of real estate includes fences, buildings, and growing trees. Chattels are \npersonal property. The definition of land would not include fences and buildings."
-    },
-    {
-        "question": "7. The most important economic characteristic of land is",
-        "choices": [
-            "a. permanence.",
-            "b. location.",
-            "c. uniqueness.",
-            "d. possession."
-        ],
-        "answer": "b. Location is sometimes called area preference or situs."
-    },
-    {
-        "question": "8. A tenant farmer built a chicken coop and a tool shed. These buildings belong to the",
-        "choices": [
-            "d. These buildings belong to the",
-            "a. tenant.",
-            "b. owner of real estate.",
-            "c. owner, but the owner must reimburse the tenant.",
-            "d. tenant, but the tenant must pay additional rent for them."
-        ],
-        "answer": "a. The coop and tool shed would be considered trade fixtures, and the tenant has the right to \nremove them up to the end of the lease."
-    },
-    {
-        "question": "9. The developer added sewer lines and utilities and built two streets. What are these items \ncalled?",
-        "choices": [
-            "a. Fixtures",
-            "b. Additions",
-            "c. Improvements",
-            "d. Permanence of investment"
-        ],
-        "answer": "c. Human-made permanent attachments are called improvements."
-    },
-    {
-        "question": "0. A new owner of a condominium received the right to use a parking space in the multi-unit \nbuilding. This right is an example of",
-        "choices": [
-            "a. an improvement.",
-            "b. a fixture.",
-            "c. an appurtenance.",
-            "d. a chattel.",
-            "c."
-        ],
-        "answer": "c. An appurtenance is a right or privilege associated with the property, although not necessarily \na part of it; typical appurtenances include parking spaces in multiunit buildings, easements, \nwater rights, and other improvements."
-    },
-    {
-        "question": "1. Method of annexation, adaptation, and agreement of the parties are legal tests for determining \nwhether an item is",
-        "choices": [
-            "a. a chattel or an emblement.",
-            "b. real property or personal property.",
-            "c. land or real estate.",
-            "d. fructus naturales or fructus industriales."
-        ],
-        "answer": "b. Whether an item is a fixture or personal property may be determined by method of \nannexation, adaptation to real estate, and agreement of the parties."
-    },
-    {
-        "question": "2. After suffering through a tornado and then flooding from the river, the buildings were gone. \nThe land was still there. This is an example of",
-        "choices": [
-            "a. uniqueness.",
-            "b. scarcity.",
-            "c. location.",
-            "d. indestructibility."
-        ],
-        "answer": "d. Land cannot be destroyed, although the improvements might be removed, as they are in this \ncase."
-    },
-    {
-        "question": "3.  A seller asked a real estate professional to draw up several documents relating to seller \nfinancing. Under these circumstances, the real estate professional should",
-        "choices": [
-            "a. ask the broker for assistance.",
-            "b. draw up the documents.",
-            "c. ignore the instructions.",
-            "d. refer the seller to an attorney."
-        ],
-        "answer": "d. A real estate professional should be careful not to practice law unless the real estate \nprofessional is, in fact, a licensed attorney and is hired to act in that capacity."
-    },
-    {
-        "question": "4. A buyer particularly liked the ornate brass lighting fixtures in a house and immediately made \nan offer, which the seller accepted. On moving day, the buyer discovered that the seller had \nreplaced all the ornate brass lighting fixtures with plain steel ones. Which of these is MOST \nlikely a correct assumption?",
-        "choices": [
-            "d. On moving day, the buyer discovered that the seller had",
-            "a. Seller: \u201cAs long as I replaced them with something of comparable value, I can take them",
-            "b. Buyer: \u201cLighting fixtures are normally considered to be real property.\u201d",
-            "c. Seller: \u201cThe lighting fixtures were personal property when I bought them at the store, so",
-            "d. Seller: \u201cThe lighting fixtures belong to me because I installed them.\u201d",
-            "c."
-        ],
-        "answer": "b. The buyer is correct in assuming that lighting fixtures are normally part of the real property. \nIf the seller had wanted to remove the fixtures, the seller should have done so before putting \nthe house on the market, or the seller should have written the intention to remove them into \nthe agreement of sale."
-    },
-    {
-        "question": "5. A farmer has posted a number of \u201cNo Trespassing\u201d and \u201cNo Hunting\u201d signs on the property. \nWhich \u201cstick\u201d in the bundle of rights gives the farmer this authority?",
-        "choices": [
-            "a. Exclusion",
-            "b. Enjoyment",
-            "c. Control",
-            "d. Disposition"
-        ],
-        "answer": "a. A real estate owner has the inherent right to exclude others from the property, although this \nright is not absolute. An adjacent property owner may have an easement right to use the \nproperty."
-    },
-    {
-        "question": "6. A right or privilege tied to real property, although not necessarily part of the property, is \ncalled a(n)",
-        "choices": [
-            "a. emblement.",
-            "b.    trade fixture.",
-            "c. appurtenance.",
-            "d. deed."
-        ],
-        "answer": "c. An appurtenance is a right or privilege association with a property, although not necessarily \na part of it. An emblement or trade fixture is a tangible item on the property. The deed is a \ndocument that transfers title."
-    },
-    {
-        "question": "7. An important characteristic of personal property is that it is",
-        "choices": [
-            "a. small enough to be carried by a person.",
-            "b. movable.",
-            "c. alive.",
-            "d. less than 100 years old."
-        ],
-        "answer": "b. Personal property is all the property than can be owned and that does not fit the definition of \nreal property; the most important distinction between real and personal property is that \npersonal property is moveable."
-    },
-    {
-        "question": "8. The Law of the Sea identifies a country\u2019s",
-        "choices": [
-            "a. territorial waters.",
-            "b. inland lakes.",
-            "c. navigable rivers.",
-            "d. water table.",
-            "c."
-        ],
-        "answer": "a. The United Nations Convention on the Law of the Sea identifies a country\u2019s territorial waters \nas those extending up to 12 nautical miles from a baseline that is the mean low-water line of the \ncountry\u2019s coastline."
-    },
-    {
-        "question": "9. To determine whether an item is a fixture, the MOST important test is whether the",
-        "choices": [
-            "a. effort needed to remove the item is significant.",
-            "b. item must be dismantled for removal.",
-            "c. value of the item is high.",
-            "d. person who installed it intended for it to be permanent."
-        ],
-        "answer": "d. The intent of the person who installed the item is the most important test of whether the item \nis a fixture."
-    },
-    {
-        "question": "0. A homeowner planted a rose bush on the property and plans to remove it when the house is \nsold. The sales contract explicitly excludes the rose bush from the sale. This provision is \nnecessary because the rose bush ordinarily is considered to be",
-        "choices": [
-            "d. The sales contract explicitly excludes the rose bush from the sale. This provision is",
-            "a. a trade fixture.",
-            "b. personal property.",
-            "c. an emblement.",
-            "d. real estate."
-        ],
-        "answer": "d. Because the rose bush is a perennial shrub, it is considered real estate"
-    },
-    {
         "question": "1. A deceased homeowner left the family home to the deceased\u2019s second spouse with the \nprovision that when the surviving spouse dies, the home goes to a child by the deceased\u2019s first \nspouse. The second spouse owns a bundle of rights but does not own the right to",
         "choices": [
             "a. will the property.",
@@ -522,6 +214,238 @@ const questions = [
             "d. a successor."
         ],
         "answer": "b. A life tenant is entitled to the rights of ownership and can benefit from both possession and \nordinary use, just as if the individual were a fee simple owner."
+    },
+    {
+        "question": "1. Which of these cannot take title as a joint tenant with right of survivorship?",
+        "choices": [
+            "a. Spouses",
+            "b. Two friends who are business partners",
+            "c. Two relatives who share a house",
+            "d. A corporation"
+        ],
+        "answer": "d. Because a corporation continues indefinitely until terminated by legal action, a corporation    \nmay never take title as a joint tenant."
+    },
+    {
+        "question": "2. When two or more individuals decide to buy a property together, the result is a form of",
+        "choices": [
+            "a. cooperation.",
+            "b. co-ownership.",
+            "c. community effort.",
+            "d. joint venture."
+        ],
+        "answer": "b. When two or more people buy property together, it is called co-ownership. A joint venture is a \nform of partnership in which two or more people carry out a single business project."
+    },
+    {
+        "question": "3.  Three brothers bought a farm together, and the deed listed only each of their names. What \nform of ownership are they presumed to have taken?",
+        "choices": [
+            "a. Tenancy by the entireties",
+            "b. Joint tenancy with right of survivorship",
+            "c. Tenancy in common",
+            "d. In severalty"
+        ],
+        "answer": "c. The brothers are presumed to be tenants in common because they did not take title as joint \ntenants with right of survivorship. Joint tenancy requires specific language. Severalty \nownership indicates one owner."
+    },
+    {
+        "question": "4. What form of ownership is employed when one person transfers ownership to someone else \nto hold and manage for a third person?",
+        "choices": [
+            "a. Joint venture",
+            "b. Joint tenancy",
+            "c. Trust",
+            "d. Severalty"
+        ],
+        "answer": "c. A trust is a device by which one person transfers ownership of property to someone else to \nhold or manage for the benefit of a third party. Severalty indicates one owner. Joint tenancy \nis a form of ownership in which, as joint owners die, the surviving owners acquire the \ndeceased tenant\u2019s interest.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "5. Two people, each of whom has children from a previous marriage, are now marrying each other. \nThey ask a real estate professional for advice about how to take title. What should the real \nestate professional suggest?",
+        "choices": [
+            "a. Tenancy in common, so that each one-half interest would go to each spouse\u2019s children",
+            "b. Joint tenancy to protect each other, so that if one dies, the other gets the house",
+            "c. That they wait until the real estate professional finds out how best to advise them",
+            "d. That they consult with an attorney"
+        ],
+        "answer": "d. Because the choice of ownership affects the ability to transfer the real estate, has tax \nimplications, and decides rights to future claims, real estate professionals should tell their \nclients to discuss the issue with an attorney. Real estate professionals are not permitted to \ngive legal advice."
+    },
+    {
+        "question": "5. What kind of provision is this?",
+        "choices": [
+            "a. Testamentary trust",
+            "b. Living trust",
+            "c. Land trust",
+            "d. Trust deed"
+        ],
+        "answer": "a. A testamentary trust is established by will after the trustor\u2019s death. A living trust is \nestablished during the trustor\u2019s lifetime. Real estate is the only asset in a land trust. A deed of \ntrust (also called a trust deed) is a financing instrument."
+    },
+    {
+        "question": "7. What kind of ownership do the horizontal property acts regulate?",
+        "choices": [
+            "a. Cooperatives",
+            "b. Condominiums",
+            "c. Time-sharing",
+            "d. Planned unit development"
+        ],
+        "answer": "b. Condominiums are regulated by a horizontal property act in most states."
+    },
+    {
+        "question": "8. Shareholders in a cooperative receive shares of stock that entitle them to a",
+        "choices": [
+            "a. common element lease.",
+            "b. trust deed.",
+            "c. proprietary lease.",
+            "d. corporate deed."
+        ],
+        "answer": "c. The proprietary lease is part of the ownership of the cooperative stock and gives the owner \nthe right to occupy a specific apartment. Common elements refer to the property owned \njointly by condominium owners.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "9. Membership camping is similar to",
+        "choices": [
+            "a. cooperative ownership.",
+            "b. condominium ownership.",
+            "c. planned use development.",
+            "d. time-share use."
+        ],
+        "answer": "d. The owner of membership camping purchases the right to use the developer\u2019s facilities, which \nis similar to a time-share. The owner may not be limited to a specific time, as is the case in a \ntypical time-share arrangement, however."
+    },
+    {
+        "question": "0. In a large high-rise condominium, each unit is owned by individual owners. The elevators, \nparking garage, and swimming pool are called",
+        "choices": [
+            "a. community property.",
+            "b. separate property.",
+            "c. common elements.",
+            "d. proprietary elements."
+        ],
+        "answer": "c. The parts of a property that condominium owners own together are the common elements. \nCommunity property is a system of property ownership based on the theory that each spouse \nhas an equal interest in property acquired during the marriage, which is distinct from \nproperty acquired by a spouse before marriage, making it that spouse\u2019s separate property."
+    },
+    {
+        "question": "1. Two individuals own an apartment building as joint tenants, sharing equally in the expenses \nand profits. If one of the co-owners sells that interest by signing and delivering a deed to a \nbuyer, which of these statements is TRUE?",
+        "choices": [
+            "a. The buyer will become a joint tenant with the remaining owner.",
+            "b. The buyer and the remaining owner will be tenants in common.",
+            "c. The buyer will be a tenant in common with the remaining owner and a joint tenant with",
+            "d. The conveyance will be invalid; the two individuals will remain joint tenants."
+        ],
+        "answer": "b. A co-owner can sell whatever the co-owner owns; however, once the unities of time, title, and \ninterest are destroyed, as they are when a joint owner sells that interest, there can no longer \nbe a joint tenancy."
+    },
+    {
+        "question": "2. In February, a seller conveyed an undivided one-half interest in a parcel of land to a buyer. In \nMarch, the seller conveyed the remaining one-half interest to a different buyer. The deed to \nthe second buyer included this statement: \u201cThis buyer is to be a joint tenant with the buyer of \nthe other half-interest in the parcel.\u201d Both deeds were recorded. Based on these facts, which of \nthese statements is TRUE?",
+        "choices": [
+            "d. Based on these facts, which of",
+            "a. The second buyer and first buyer hold title to the land as joint tenants under the terms of",
+            "b. The second buyer and first buyer own the land by partition.",
+            "c. The second buyer and first buyer are tenants in common.",
+            "c.",
+            "d. The second buyer owns a half-interest in the land as a joint tenant; the first buyer owns a"
+        ],
+        "answer": "c. Because there are two deeds made at different times, the four unities of joint tenancy have not \nbeen met. This means that the second buyer and first buyer are tenants in common."
+    },
+    {
+        "question": "3. Three people own a large parcel of undeveloped land in joint tenancy. One of them wants to \nbuild a shopping center on the property, while the other two want to use it as an organic farm. \nThe would-be developer tries to buy the other tenants\u2019 interests, but they refuse to sell. Which \nof these is the developer\u2019s BEST option?",
+        "choices": [
+            "a. File a suit for partition",
+            "b. Begin building a shopping center on one-third of the property",
+            "c. Wait for the other two to die",
+            "d. File a suit to quiet title"
+        ],
+        "answer": "a. When co-owners cannot come to an agreement, they must file for partition in court. The \nproperty will not physically be divided; rather, one or more will be given the opportunity to \nbuy the others out. If this is not possible, then the property will be sold, and the proceeds will \nbe divided appropriately."
+    },
+    {
+        "question": "4. Fee simple ownership of a cottage in a lakefront community includes an undivided percentage \ninterest in a parking lot, a golf course, and a swimming pool, all located in the development. \nBased on these facts alone, the ownership interest is probably BEST described as a",
+        "choices": [
+            "a. time-share estate.",
+            "b. time-share use.",
+            "c. condominium.",
+            "d. cooperative."
+        ],
+        "answer": "c. It appears that this is condominium ownership because it includes ownership of a cottage as \nwell as an interest in the common elements. Cooperative ownership is ruled out because the \nownership does not have a proprietary lease. It is not a time-share, because it includes more \nthan the right to use the property at a specific time."
+    },
+    {
+        "question": "0. N contributes $30,000 and agrees to run the business, which \nthe owners call \u201cProperty Group Partners.\u201d Neither M nor R has any right to participate in the \noperation of the venture. Based on these facts, what type of business organization have M, R, \nand N established?",
+        "choices": [
+            "a. Joint venture",
+            "b. Limited partnership",
+            "c. General partnership",
+            "d. Limited liability company"
+        ],
+        "answer": "b. A limited partnership limits the participation of the silent partners, but also limits their \nliability. A general partnership would require that all be equally involved in running the \noperation and would expose all to liability.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "6. Based on the facts in the previous question, if the building on the property collapses, resulting \nin injury and property damage worth $275,000, what will be M\u2019s liability?",
+        "choices": [
+            "a. None",
+            "b. $50,000",
+            "c. $91,667",
+            "d. $100,000"
+        ],
+        "answer": "b. Each of the limited partners is limited in liability to the $50,000 amount of the original \ninvestment."
+    },
+    {
+        "question": "7. A joint tenancy requires",
+        "choices": [
+            "a. unity of relationship.",
+            "b. unity of possession.",
+            "c. unity of purpose.",
+            "d. unity of name."
+        ],
+        "answer": "b. To create joint tenancy ownership, four unities are required: possession, interest, time, and \ntitle."
+    },
+    {
+        "question": "8. A characteristic of a tenancy by the entirety is that",
+        "choices": [
+            "a. title may be conveyed by a deed signed by either party.",
+            "b. a spouse may dispose of their interest by will.",
+            "c. the spouses can agree to own unequal interests.",
+            "d. the surviving spouse automatically owns the property acquired during the marriage."
+        ],
+        "answer": "d. Under tenancy by the entirety, title may be conveyed only by a deed signed by both parties, \neach spouse owns an equal, undivided interest in the property, and the surviving spouse \nautomatically becomes the owner upon the death of the other."
+    },
+    {
+        "question": "9. A trust is created to pay for a student\u2019s college education. An attorney makes payments on \nbehalf of the student directly to the college. Based on these facts, which of these statements \nBEST characterizes the relationships among the parties to the trust?",
+        "choices": [
+            "a. The attorney is the trustor, the student is the beneficiary, and the creator of the trust is the",
+            "b. The creator of the trust is the trustor, the college is the beneficiary, and the attorney is the",
+            "c. The creator of the trust is the trustor, the student is the beneficiary, and the attorney is the",
+            "d. The creator of the trust is the trustor, the attorney is the trustee, and the college is the"
+        ],
+        "answer": "c. The creator of the trust is the owner-trustor, the student is the beneficiary, and the attorney is \nthe trustee, the person who manages the trust.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "0. A company is a legal entity, created by charter under the laws of the state. The company is \nmanaged and operated by a board and is permitted to buy and sell real estate. When one of its \ndirectors dies, the company continues to operate. Because of its structure, the company\u2019s \nincome is subject to double taxation. The company is BEST described as a",
+        "choices": [
+            "a. partnership.",
+            "b. condominium trust.",
+            "c. corporation.",
+            "d. limited liability company."
+        ],
+        "answer": "c. The corporation would not be affected if one of the directors dies. The most important fact \nprovided is the double taxation that applies to corporations."
+    },
+    {
+        "question": "1. When a corporation takes complete ownership of a property, the ownership is in",
+        "choices": [
+            "a. joint tenancy.",
+            "b. tenancy in common.",
+            "c. partnership.",
+            "d. severalty."
+        ],
+        "answer": "d. A corporation is treated as a person and may hold ownership in severalty."
+    },
+    {
+        "question": "2.   In a tenancy in common, if the fractions of ownership are not stated in the deed, how are they \ndetermined?",
+        "choices": [
+            "a. The tenants need a judicial decision to determine the fractional shares.",
+            "b. The tenants are presumed to hold equal shares.",
+            "c. The tenants settle the issue through binding arbitration.",
+            "d. The tenants must terminate the tenancy in common through partition."
+        ],
+        "answer": "b. The deed creating a tenancy in common may or may not state the fractional interest held by \neach co-owner. If no fractions are stated, the tenants are presumed to hold equal shares."
+    },
+    {
+        "question": "3. In a land trust, the beneficiary is usually also the",
+        "choices": [
+            "a. trustor.",
+            "b. trustee.",
+            "c. fiduciary.",
+            "d. attorney in fact."
+        ],
+        "answer": "a. In a land trust, the beneficiary is usually also the trustor. The beneficiary retains management \nand control of the real property and has the right of possession and the right to any income."
     }
 ];
 
