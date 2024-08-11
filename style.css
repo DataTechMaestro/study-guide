@@ -6,6 +6,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 20px; /* Added padding to avoid text clipping on very small screens */
+    box-sizing: border-box; /* Ensures padding is included in element width/height */
+    overflow-y: auto; /* Allows scrolling if content overflows */
 }
 
 .container {
@@ -13,8 +16,12 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    max-width: 60%; /* Ensure container doesn't exceed the screen width */
+    width: 60%; /* Allow container to take full available width */
+    max-height: 100vh; /* Ensure container doesn't exceed the screen height */
+    overflow-y: auto; /* Allow scrolling inside the container if content overflows */
     text-align: center;
+    box-sizing: border-box; /* Includes padding in the width and height */
 }
 
 .btn {
@@ -25,6 +32,7 @@ body {
     background: #007bff;
     color: white;
     cursor: pointer;
+    white-space: normal; /* Allows text to wrap inside buttons */
 }
 
 .btn:hover {
@@ -38,6 +46,7 @@ body {
 .btn-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .start-btn, .next-btn {
