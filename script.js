@@ -4,117 +4,220 @@ const questionContainerElement = document.getElementById('question-container');
 const questionElement = document.getElementById('question');
 const answerButtonsElement = document.getElementById('answer-buttons');
 const explanationContainerElement = document.getElementById('explanation-container');
-const resultsContainerElement = document.getElementById('results');
 const toggleAnswersCheckbox = document.getElementById('toggle-answers');
-const toggleResultsCheckbox = document.getElementById('toggle-results');
 
 const questions = [
-[
     {
-        "question": "1. Office buildings and retail space are examples of",
+        "question": "1. Land, mineral, and air rights in the land are included in the definition of",
         "choices": [
-            "a. commercial real estate.",
-            "b. special use real estate.",
-            "c. residential property.",
-            "d. industrial property."
+            "a. attachments.",
+            "b. real property.",
+            "c. subsurface rights.",
+            "d. improvements."
         ],
-        "answer": "a. Office buildings and retail space are examples of commercial real estate. Special use property \nincludes churches and dormitories; industrial property includes warehouses and factories."
+        "answer": "b. Subsurface rights and improvements are included in the definition of real estate. Real \nproperty also includes rights and privileges."
     },
     {
-        "question": "2. The market value of a property less the amount still owed on it is the owner\u2019s",
+        "question": "2. Which of these is an example of an economic characteristic of land?",
         "choices": [
-            "a. purchase price.",
-            "b. equity.",
-            "c. depreciation.",
-            "d. tax deduction."
+            "a. Immobility",
+            "b. Indestructibility",
+            "c. Uniqueness",
+            "d. Scarcity"
         ],
-        "answer": "b. A property owner\u2019s equity is the amount remaining after subtracting any outstanding loans \nagainst the property from its original purchase price."
+        "answer": "d. Immobility, indestructibility, and uniqueness are physical characteristics, while scarcity is an \neconomic characteristic."
     },
     {
-        "question": "3. All of these factors will tend to affect demand for real estate EXCEPT",
+        "question": "3. Another word for uniqueness is",
         "choices": [
-            "a. transfer taxes.",
-            "b. employment levels.",
-            "c. wage rates.",
-            "d. demographics."
+            "a. scarcity.",
+            "b. nonhomogeneity.",
+            "c. fructus industrials.",
+            "d. immobility."
         ],
-        "answer": "a. Transfer taxes affect the supply of real estate; employment levels, wage rates, and \ndemographics affect demand for real estate."
+        "answer": "b. Uniqueness, or nonhomogeneity, indicates that no two parcels of land are alike."
     },
     {
-        "question": "4. When the population of a town suddenly increases, which of these is MOST likely to occur?",
+        "question": "4. The bundle of rights includes",
         "choices": [
-            "a. Rental rates will fall due to increased competition",
-            "b. Demand for housing will decrease",
-            "c. New housing starts will decrease",
-            "d. Real estate prices will increase"
+            "a. taxation.",
+            "b. transportation.",
+            "c. expansion.",
+            "d. exclusion."
         ],
-        "answer": "d. With a sudden influx of people, rental rates will increase; demand for housing will increase; \nand more new homes will be started to satisfy demand."
+        "answer": "d. The bundle of rights includes possession, control, exclusion, enjoyment, and disposition. There \nis no right to expansion, except by acquiring another parcel."
     },
     {
-        "question": "5. Property management, appraisal, financing, and development are all",
+        "question": "5. Owners with littoral rights enjoy",
         "choices": [
-            "a. specializations directly linked to state and federal government financial policies.",
-            "b. separate professions within the real estate industry.",
-            "c. real estate brokerage professions.",
-            "d. demographic factors that affect demand for real property in a commercial market."
+            "a. unrestricted use of available waters, but they own the land adjacent to the water only as",
+            "b. the right of disposition.",
+            "c. unrestricted use of the surface of the earth.",
+            "d. unrestricted rights to the use of fixtures.",
+            "c."
         ],
-        "answer": "b. Property management, appraisal, financing, and development are not linked to the \ngovernment; they are all linked to real estate business."
+        "answer": "a. Owners of littoral rights enjoy unrestricted use of available waters, but own the land adjacent \nto the water only as far as the average high-water mark."
     },
     {
-        "question": "6. The idea that no two parcels of land are exactly alike is called",
+        "question": "6. Growing trees, fences, and buildings are all considered",
         "choices": [
-            "a. immobility.",
-            "b. subdivision.",
+            "a. chattels.",
+            "b. land.",
+            "c. fixtures.",
+            "d. real estate."
+        ],
+        "answer": "d. The definition of real estate includes fences, buildings, and growing trees. Chattels are \npersonal property. The definition of land would not include fences and buildings."
+    },
+    {
+        "question": "7. The most important economic characteristic of land is",
+        "choices": [
+            "a. permanence.",
+            "b. location.",
             "c. uniqueness.",
-            "d. location."
+            "d. possession."
         ],
-        "answer": "c. No matter how identical they may appear, no two parcels of real estate are ever exactly alike; \neach occupies its own unique geographic location."
+        "answer": "b. Location is sometimes called area preference or situs."
     },
     {
-        "question": "7. All of these factors can affect the supply of real estate EXCEPT",
+        "question": "8. A tenant farmer built a chicken coop and a tool shed. These buildings belong to the",
         "choices": [
-            "a. demographics.",
-            "b. labor force.",
-            "c. construction costs.",
-            "d. government controls."
+            "d. These buildings belong to the",
+            "a. tenant.",
+            "b. owner of real estate.",
+            "c. owner, but the owner must reimburse the tenant.",
+            "d. tenant, but the tenant must pay additional rent for them."
         ],
-        "answer": "a. Demographics affect the demand for real estate. The labor force, construction costs, and \ngovernment controls affect the supply of real estate."
+        "answer": "a. The coop and tool shed would be considered trade fixtures, and the tenant has the right to \nremove them up to the end of the lease."
     },
     {
-        "question": "8. A property owner who does not want to deal with the everyday tasks of managing a rental \nproperty can hire",
+        "question": "9. The developer added sewer lines and utilities and built two streets. What are these items \ncalled?",
         "choices": [
-            "a. a property manager.",
-            "b. an appraiser.",
-            "c. a home inspector.",
-            "d. a developer."
+            "a. Fixtures",
+            "b. Additions",
+            "c. Improvements",
+            "d. Permanence of investment"
         ],
-        "answer": "a. A property manager handles the day-to-day tasks of managing property for an owner. An \nappraiser provides an opinion of value; a home inspector looks for problems with the \nproperty; and the developer improves the property."
+        "answer": "c. Human-made permanent attachments are called improvements."
     },
     {
-        "question": "9. When the supply of a certain commodity decreases while demand remains the same, the price \nof that commodity will tend to",
+        "question": "0. A new owner of a condominium received the right to use a parking space in the multi-unit \nbuilding. This right is an example of",
         "choices": [
-            "a. remain the same.",
-            "b. increase.",
-            "c. decrease by 10%.",
-            "d. decrease by 20%."
+            "a. an improvement.",
+            "b. a fixture.",
+            "c. an appurtenance.",
+            "d. a chattel.",
+            "c."
         ],
-        "answer": "b. When consumers continue to demand a product for which there is limited supply, the price \ngenerally increases. \n \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+        "answer": "c. An appurtenance is a right or privilege associated with the property, although not necessarily \na part of it; typical appurtenances include parking spaces in multiunit buildings, easements, \nwater rights, and other improvements."
     },
     {
-        "question": "0. A factor affecting the real estate market that usually is not the result of government controls is",
+        "question": "1. Method of annexation, adaptation, and agreement of the parties are legal tests for determining \nwhether an item is",
         "choices": [
-            "a. the Federal Reserve Board\u2019s discount rate.",
-            "b. a shortage of skilled labor or building materials.",
-            "c. land-use controls, such as zoning.",
-            "d. federal environmental regulations."
+            "a. a chattel or an emblement.",
+            "b. real property or personal property.",
+            "c. land or real estate.",
+            "d. fructus naturales or fructus industriales."
         ],
-        "answer": "b. A shortage of skilled labor will affect the supply of real estate, and this labor shortage is not \ngenerally associated with governmental policies."
+        "answer": "b. Whether an item is a fixture or personal property may be determined by method of \nannexation, adaptation to real estate, and agreement of the parties."
+    },
+    {
+        "question": "2. After suffering through a tornado and then flooding from the river, the buildings were gone. \nThe land was still there. This is an example of",
+        "choices": [
+            "a. uniqueness.",
+            "b. scarcity.",
+            "c. location.",
+            "d. indestructibility."
+        ],
+        "answer": "d. Land cannot be destroyed, although the improvements might be removed, as they are in this \ncase."
+    },
+    {
+        "question": "3.  A seller asked a real estate professional to draw up several documents relating to seller \nfinancing. Under these circumstances, the real estate professional should",
+        "choices": [
+            "a. ask the broker for assistance.",
+            "b. draw up the documents.",
+            "c. ignore the instructions.",
+            "d. refer the seller to an attorney."
+        ],
+        "answer": "d. A real estate professional should be careful not to practice law unless the real estate \nprofessional is, in fact, a licensed attorney and is hired to act in that capacity."
+    },
+    {
+        "question": "4. A buyer particularly liked the ornate brass lighting fixtures in a house and immediately made \nan offer, which the seller accepted. On moving day, the buyer discovered that the seller had \nreplaced all the ornate brass lighting fixtures with plain steel ones. Which of these is MOST \nlikely a correct assumption?",
+        "choices": [
+            "d. On moving day, the buyer discovered that the seller had",
+            "a. Seller: \u201cAs long as I replaced them with something of comparable value, I can take them",
+            "b. Buyer: \u201cLighting fixtures are normally considered to be real property.\u201d",
+            "c. Seller: \u201cThe lighting fixtures were personal property when I bought them at the store, so",
+            "d. Seller: \u201cThe lighting fixtures belong to me because I installed them.\u201d",
+            "c."
+        ],
+        "answer": "b. The buyer is correct in assuming that lighting fixtures are normally part of the real property. \nIf the seller had wanted to remove the fixtures, the seller should have done so before putting \nthe house on the market, or the seller should have written the intention to remove them into \nthe agreement of sale."
+    },
+    {
+        "question": "5. A farmer has posted a number of \u201cNo Trespassing\u201d and \u201cNo Hunting\u201d signs on the property. \nWhich \u201cstick\u201d in the bundle of rights gives the farmer this authority?",
+        "choices": [
+            "a. Exclusion",
+            "b. Enjoyment",
+            "c. Control",
+            "d. Disposition"
+        ],
+        "answer": "a. A real estate owner has the inherent right to exclude others from the property, although this \nright is not absolute. An adjacent property owner may have an easement right to use the \nproperty."
+    },
+    {
+        "question": "6. A right or privilege tied to real property, although not necessarily part of the property, is \ncalled a(n)",
+        "choices": [
+            "a. emblement.",
+            "b.    trade fixture.",
+            "c. appurtenance.",
+            "d. deed."
+        ],
+        "answer": "c. An appurtenance is a right or privilege association with a property, although not necessarily \na part of it. An emblement or trade fixture is a tangible item on the property. The deed is a \ndocument that transfers title."
+    },
+    {
+        "question": "7. An important characteristic of personal property is that it is",
+        "choices": [
+            "a. small enough to be carried by a person.",
+            "b. movable.",
+            "c. alive.",
+            "d. less than 100 years old."
+        ],
+        "answer": "b. Personal property is all the property than can be owned and that does not fit the definition of \nreal property; the most important distinction between real and personal property is that \npersonal property is moveable."
+    },
+    {
+        "question": "8. The Law of the Sea identifies a country\u2019s",
+        "choices": [
+            "a. territorial waters.",
+            "b. inland lakes.",
+            "c. navigable rivers.",
+            "d. water table.",
+            "c."
+        ],
+        "answer": "a. The United Nations Convention on the Law of the Sea identifies a country\u2019s territorial waters \nas those extending up to 12 nautical miles from a baseline that is the mean low-water line of the \ncountry\u2019s coastline."
+    },
+    {
+        "question": "9. To determine whether an item is a fixture, the MOST important test is whether the",
+        "choices": [
+            "a. effort needed to remove the item is significant.",
+            "b. item must be dismantled for removal.",
+            "c. value of the item is high.",
+            "d. person who installed it intended for it to be permanent."
+        ],
+        "answer": "d. The intent of the person who installed the item is the most important test of whether the item \nis a fixture."
+    },
+    {
+        "question": "0. A homeowner planted a rose bush on the property and plans to remove it when the house is \nsold. The sales contract explicitly excludes the rose bush from the sale. This provision is \nnecessary because the rose bush ordinarily is considered to be",
+        "choices": [
+            "d. The sales contract explicitly excludes the rose bush from the sale. This provision is",
+            "a. a trade fixture.",
+            "b. personal property.",
+            "c. an emblement.",
+            "d. real estate."
+        ],
+        "answer": "d. Because the rose bush is a perennial shrub, it is considered real estate"
     }
 ];
 
 let shuffledQuestions, currentQuestionIndex;
 let score = 0;
-let userAnswers = [];
 
 startButton.addEventListener('click', startGame);
 nextButton.addEventListener('click', () => {
@@ -123,13 +226,12 @@ nextButton.addEventListener('click', () => {
 });
 
 function startGame() {
+    console.log("Game started"); // Debugging line
     startButton.classList.add('hide');
     shuffledQuestions = questions.sort(() => Math.random() - 0.5);
     currentQuestionIndex = 0;
     score = 0;
-    userAnswers = [];
     questionContainerElement.classList.remove('hide');
-    resultsContainerElement.classList.add('hide');
     setNextQuestion();
 }
 
@@ -148,6 +250,9 @@ function showQuestion(question) {
         // Set data attributes for correct answers and explanations
         if (choice[0] === question.answer[0]) {
             button.dataset.correct = true;
+            button.dataset.explanation = question.answer;  // Explanation is the full answer text
+        } else {
+            button.dataset.explanation = "Incorrect. The correct answer is " + question.answer;
         }
 
         button.addEventListener('click', selectAnswer);
@@ -168,85 +273,34 @@ function selectAnswer(e) {
     const selectedButton = e.target;
     const correct = selectedButton.dataset.correct === 'true';
 
-    // Record user's answer
-    userAnswers.push({
-        question: shuffledQuestions[currentQuestionIndex].question,
-        correct: correct,
-        selectedAnswer: selectedButton.innerText,
-        correctAnswer: shuffledQuestions[currentQuestionIndex].answer
+    // Highlight the user's selection
+    setStatusClass(selectedButton, correct);
+
+    // Highlight the correct answer
+    Array.from(answerButtonsElement.children).forEach(button => {
+        if (button.dataset.correct) {
+            setStatusClass(button, true);
+        }
+        button.disabled = true;  // Disable all buttons after selection
     });
 
-    // Check if real-time results are enabled
-    if (!toggleResultsCheckbox.checked) {
-        // Highlight the user's selection
-        setStatusClass(selectedButton, correct);
-
-        // Highlight the correct answer if showing answers after each question is enabled
-        if (toggleAnswersCheckbox.checked) {
-            Array.from(answerButtonsElement.children).forEach(button => {
-                if (button.dataset.correct) {
-                    setStatusClass(button, true);
-                }
-                button.disabled = true;  // Disable all buttons after selection
-            });
-            showExplanation(selectedButton);
-        } else {
-            // Disable all buttons after selection without showing results
-            Array.from(answerButtonsElement.children).forEach(button => {
-                button.disabled = true;
-            });
-        }
-    } else {
-        // If results are shown at the end, just disable all buttons
-        Array.from(answerButtonsElement.children).forEach(button => {
-            button.disabled = true;
-        });
+    // Show explanation if toggle is on
+    if (toggleAnswersCheckbox.checked) {
+        showExplanation(selectedButton);
     }
 
     // Show the next button or finish the quiz
     if (shuffledQuestions.length > currentQuestionIndex + 1) {
         nextButton.classList.remove('hide');
     } else {
-        startButton.innerText = 'Show Results';
+        startButton.innerText = 'Restart';
         startButton.classList.remove('hide');
-        startButton.removeEventListener('click', startGame);  // Ensure only one event listener is active
-        startButton.addEventListener('click', showResults);
     }
 }
 
-function showResults() {
-    questionContainerElement.classList.add('hide');
-    nextButton.classList.add('hide');
-    resultsContainerElement.classList.remove('hide');
-
-    resultsContainerElement.innerHTML = `<h2>Quiz Results</h2>`;
-    userAnswers.forEach((answer, index) => {
-        const resultDiv = document.createElement('div');
-        resultDiv.classList.add('result');
-
-        const questionText = document.createElement('p');
-        questionText.innerText = `Question ${index + 1}: ${answer.question}`;
-        resultDiv.appendChild(questionText);
-
-        const userAnswerText = document.createElement('p');
-        userAnswerText.innerText = `Your Answer: ${answer.selectedAnswer}`;
-        userAnswerText.classList.add(answer.correct ? 'correct' : 'wrong');
-        resultDiv.appendChild(userAnswerText);
-
-        if (!answer.correct) {
-            const correctAnswerText = document.createElement('p');
-            correctAnswerText.innerText = `Correct Answer: ${answer.correctAnswer}`;
-            correctAnswerText.classList.add('correct');
-            resultDiv.appendChild(correctAnswerText);
-        }
-
-        resultsContainerElement.appendChild(resultDiv);
-    });
-
-    // Reset the start button to start the quiz again
-    startButton.innerText = 'Restart Quiz';
-    startButton.removeEventListener('click', showResults);  // Ensure only one event listener is active
-    startButton.addEventListener('click', startGame);
+function showExplanation(button) {
+    explanationContainerElement.innerText = button.dataset.explanation;
+    explanationContainerElement.classList.remove('hide');
 }
 
 function setStatusClass(element, correct) {
