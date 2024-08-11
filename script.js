@@ -8,6 +8,107 @@ const toggleAnswersCheckbox = document.getElementById('toggle-answers');
 
 const questions = [
     {
+        "question": "1. Office buildings and retail space are examples of",
+        "choices": [
+            "a. commercial real estate.",
+            "b. special use real estate.",
+            "c. residential property.",
+            "d. industrial property."
+        ],
+        "answer": "a. Office buildings and retail space are examples of commercial real estate. Special use property \nincludes churches and dormitories; industrial property includes warehouses and factories."
+    },
+    {
+        "question": "2. The market value of a property less the amount still owed on it is the owner\u2019s",
+        "choices": [
+            "a. purchase price.",
+            "b. equity.",
+            "c. depreciation.",
+            "d. tax deduction."
+        ],
+        "answer": "b. A property owner\u2019s equity is the amount remaining after subtracting any outstanding loans \nagainst the property from its original purchase price."
+    },
+    {
+        "question": "3. All of these factors will tend to affect demand for real estate EXCEPT",
+        "choices": [
+            "a. transfer taxes.",
+            "b. employment levels.",
+            "c. wage rates.",
+            "d. demographics."
+        ],
+        "answer": "a. Transfer taxes affect the supply of real estate; employment levels, wage rates, and \ndemographics affect demand for real estate."
+    },
+    {
+        "question": "4. When the population of a town suddenly increases, which of these is MOST likely to occur?",
+        "choices": [
+            "a. Rental rates will fall due to increased competition",
+            "b. Demand for housing will decrease",
+            "c. New housing starts will decrease",
+            "d. Real estate prices will increase"
+        ],
+        "answer": "d. With a sudden influx of people, rental rates will increase; demand for housing will increase; \nand more new homes will be started to satisfy demand."
+    },
+    {
+        "question": "5. Property management, appraisal, financing, and development are all",
+        "choices": [
+            "a. specializations directly linked to state and federal government financial policies.",
+            "b. separate professions within the real estate industry.",
+            "c. real estate brokerage professions.",
+            "d. demographic factors that affect demand for real property in a commercial market.",
+            "c."
+        ],
+        "answer": "b. Property management, appraisal, financing, and development are not linked to the \ngovernment; they are all linked to real estate business."
+    },
+    {
+        "question": "6. The idea that no two parcels of land are exactly alike is called",
+        "choices": [
+            "a. immobility.",
+            "b. subdivision.",
+            "c. uniqueness.",
+            "d. location."
+        ],
+        "answer": "c. No matter how identical they may appear, no two parcels of real estate are ever exactly alike; \neach occupies its own unique geographic location."
+    },
+    {
+        "question": "7. All of these factors can affect the supply of real estate EXCEPT",
+        "choices": [
+            "a. demographics.",
+            "b. labor force.",
+            "c. construction costs.",
+            "d. government controls."
+        ],
+        "answer": "a. Demographics affect the demand for real estate. The labor force, construction costs, and \ngovernment controls affect the supply of real estate."
+    },
+    {
+        "question": "8. A property owner who does not want to deal with the everyday tasks of managing a rental \nproperty can hire",
+        "choices": [
+            "a. a property manager.",
+            "b. an appraiser.",
+            "c. a home inspector.",
+            "d. a developer."
+        ],
+        "answer": "a. A property manager handles the day-to-day tasks of managing property for an owner. An \nappraiser provides an opinion of value; a home inspector looks for problems with the \nproperty; and the developer improves the property."
+    },
+    {
+        "question": "9. When the supply of a certain commodity decreases while demand remains the same, the price \nof that commodity will tend to",
+        "choices": [
+            "a. remain the same.",
+            "b. increase.",
+            "c. decrease by 10%.",
+            "d. decrease by 20%."
+        ],
+        "answer": "b. When consumers continue to demand a product for which there is limited supply, the price \ngenerally increases. \n \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "0. A factor affecting the real estate market that usually is not the result of government controls is",
+        "choices": [
+            "a. the Federal Reserve Board\u2019s discount rate.",
+            "b. a shortage of skilled labor or building materials.",
+            "c. land-use controls, such as zoning.",
+            "d. federal environmental regulations."
+        ],
+        "answer": "b. A shortage of skilled labor will affect the supply of real estate, and this labor shortage is not \ngenerally associated with governmental policies."
+    },
+    {
         "question": "1. Land, mineral, and air rights in the land are included in the definition of",
         "choices": [
             "a. attachments.",
@@ -213,6 +314,211 @@ const questions = [
             "d. real estate."
         ],
         "answer": "d. Because the rose bush is a perennial shrub, it is considered real estate"
+    },
+    {
+        "question": "1. A deceased homeowner left the family home to the deceased\u2019s second spouse with the \nprovision that when the surviving spouse dies, the home goes to a child by the deceased\u2019s first \nspouse. The second spouse owns a bundle of rights but does not own the right to",
+        "choices": [
+            "a. will the property.",
+            "b. sell the property.",
+            "c. lease the property.",
+            "d. decorate the property."
+        ],
+        "answer": "a. The second spouse owns a life estate and has the entire bundle of rights except the right to \nwill the property."
+    },
+    {
+        "question": "2. A freehold estate lasts for",
+        "choices": [
+            "a. 99 years.",
+            "b. no longer than 100 years.",
+            "c. an indeterminable time.",
+            "d. the number of years specified when the owner takes possession."
+        ],
+        "answer": "c. A freehold estate lasts for an indeterminable length of time, such as for a lifetime or forever."
+    },
+    {
+        "question": "3. A property owner conveyed a one-acre parcel of land to a preschool. The deed provided that \nthe property was to be used only as a playground; the former owner reserved a right of \nreentry. What kind of estate has been granted?",
+        "choices": [
+            "a. Leasehold",
+            "b. Fee simple subject to a condition subsequent",
+            "c. Fee simple absolute",
+            "d. Curtesy"
+        ],
+        "answer": "b. The owner has granted a fee simple subject to a condition subsequent. If, at some point in the \nfuture, the land is not used as a playground, the former owner or the former owner\u2019s heirs may \nexercise the right of re-entry by retaking physical possession of the land."
+    },
+    {
+        "question": "4.  A notice is filed in the public record of pending litigation affecting the title to a property. This \nnotice is an example of",
+        "choices": [
+            "a. fee simple determinable",
+            "b. police power",
+            "c. an encroachment",
+            "d. a lis pendens"
+        ],
+        "answer": "d. A lis pendens is a notice filed in the public record affecting the title to property or a claimed \nownership interest in it.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "5. A property owner gave land to a school \u201cso long as the land is used for only academic and \nrecreational purposes.\u201d The ownership interest granted here is called",
+        "choices": [
+            "a. an easement by prescription.",
+            "b. an encumbrance.",
+            "c. a bundle of rights.",
+            "d. a fee simple determinable."
+        ],
+        "answer": "d. The terms so long as, while, and during generally indicate creation of a fee simple \ndeterminable interest. The school obtains the full bundle of rights gained by a property \nowner, but one of the \u201csticks\u201d in that bundle has a special feature."
+    },
+    {
+        "question": "6. If the government acquires privately owned real estate through a condemnation suit, it is \nexercising its power of",
+        "choices": [
+            "a. escheat.",
+            "b. reverter.",
+            "c. eminent domain.",
+            "d. defeasance."
+        ],
+        "answer": "c. The right of the state to acquire private property for public use is eminent domain. The court \naction is called condemnation. Property escheats back to the state when it becomes \nownerless; that is, the owner dies leaving no heirs and no will."
+    },
+    {
+        "question": "7. The owner of two acres of land sold one acre and reserved an easement appurtenant for \nentrance and exit over that acre to reach the public road. The buyer\u2019s land is",
+        "choices": [
+            "d. The buyer\u2019s land is",
+            "a. capable of being cleared of the easement if the buyer sells to a third party.",
+            "b. the servient tenement.",
+            "c. the dominant tenement.",
+            "d. subject to an easement in gross."
+        ],
+        "answer": "b. The seller\u2019s remaining parcel is the dominant tenement and benefits from the easement. The \neasement runs over the buyer\u2019s property, the servient tenement."
+    },
+    {
+        "question": "8. A large undeveloped parcel of land borders a road on the lower edge. The owner sells the \nlower portion of the property and the buyer builds a home on it. Several years later, the owner \nsells the upper-portion of the property to a different buyer. The second buyer\u2019s property does \nnot border any road. For that buyer to gain access to the road, the buyer must claim an \neasement",
+        "choices": [
+            "d. For that buyer to gain access to the road, the buyer must claim an",
+            "a. by necessity.",
+            "b. in gross.",
+            "c. by prescription.",
+            "d. by restriction."
+        ],
+        "answer": "a. An easement by necessity could be created by court order to permit legal access to the second \nbuyer\u2019s property.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "9. If the dominant estate merges with the servient estate, which of these is TRUE?",
+        "choices": [
+            "a. The easement remains in effect for the entire parcel.",
+            "b. The easement is suspended but cannot be terminated.",
+            "c. The easement is terminated.",
+            "d. The new owner must bring a suit seeking severance of the easement from the combined"
+        ],
+        "answer": "c. If the owner of the dominant tenement also becomes owner of the servient tenement (or vice \nversa), the easement terminates. Because the same person owns both properties, there is no \nneed for the easement to exist."
+    },
+    {
+        "question": "0. If the homeowner has an outstanding mortgage balance of $135,000 and credit \ncard debts amounting to $24,360, how much is protected by the homestead exemption?",
+        "choices": [
+            "a. $640",
+            "b. $2,140",
+            "c. $20,000",
+            "d. $26,500"
+        ],
+        "answer": "c. The homestead exemption is $20,"
+    },
+    {
+        "question": "1. In some states, a husband cannot sell property unless the wife also signs the deed. The wife\u2019s \ninterest is called",
+        "choices": [
+            "d. The wife\u2019s",
+            "a. personal property rights.",
+            "b. homestead rights.",
+            "c. curtesy rights.",
+            "d. dower rights."
+        ],
+        "answer": "d. A wife\u2019s interest in her deceased husband\u2019s property is dower, a husband\u2019s interest is curtesy, \nand protection for some part of the family home is called homestead rights."
+    },
+    {
+        "question": "2. The state\u2019s authority to enact legislation to protect the public is passed through to \nmunicipalities and counties through",
+        "choices": [
+            "a. police power.",
+            "b. enabling acts.",
+            "c. licensing laws.",
+            "d. processing papers."
+        ],
+        "answer": "b. The state passes police power to counties and municipalities through enabling acts. Licensing \nlaws are an example of police power.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+    },
+    {
+        "question": "3. The state requires enough land to build a four-lane highway. For the state to acquire the \nneeded land, the state must reimburse every property owner",
+        "choices": [
+            "a. the value of the land but not improvements.",
+            "b. the estimated future value of the property after completion of the highway.",
+            "c. for the amount that the property owner paid for the land.",
+            "d. for the fair market value of the property taken."
+        ],
+        "answer": "d. To acquire private property through eminent domain, the state must prove that the purchase \nis for public good, pay a fair price, and allow the property owner full rights to appeal. The \nprice may or may not reflect what the owner had actually paid for the property."
+    },
+    {
+        "question": "4. A patient died in a nursing home. The deceased left no heirs and had not written a will. What \nhappens to the deceased\u2019s $250,000 estate?",
+        "choices": [
+            "a. It escheats to the state or county.",
+            "b. The nursing home gets to keep it.",
+            "c. It will be split between the nursing home and the county.",
+            "d. It can be paid over to the deceased\u2019s church."
+        ],
+        "answer": "a. Because the deceased left no will and there are no heirs, the $250,000 is essentially ownerless. \nIt reverts to the state or county."
+    },
+    {
+        "question": "5. Which of these is defined as a claim, charge, or liability that attaches to real estate?",
+        "choices": [
+            "a. Lien",
+            "b. Easement",
+            "c. Deed restriction",
+            "d. Encumbrance"
+        ],
+        "answer": "d. An encumbrance is a claim, charge, or liability that attaches to real estate, such as a lien, \neasement, or deed restriction."
+    },
+    {
+        "question": "6. Which of these must exist for an appurtenant easement to exist?",
+        "choices": [
+            "a. Two adjacent parcels, different owners",
+            "b. Two adjacent parcels, one owner",
+            "c. Landlocked property that requires passage to the street",
+            "d. Long-time unauthorized usage"
+        ],
+        "answer": "a. An easement appurtenant must have two owners and two parcels of land. A landlocked parcel \nwould require an easement by necessity; long-time unauthorized usage would lead to an \neasement by prescription."
+    },
+    {
+        "question": "7. What are deed restrictions?",
+        "choices": [
+            "a. Public land restrictions",
+            "b. Illegal land restrictions",
+            "c. Private agreements affecting the use of the land",
+            "d. Informal agreements between neighbors",
+            "c."
+        ],
+        "answer": "c. Deed restrictions are private agreements written into the deed and are privately enforced. \nExamples of public restrictions include zoning ordinances and building codes."
+    },
+    {
+        "question": "8. The electric company has the right to extend its wires over 50 parcels of land. What right does \nthe electric company have?",
+        "choices": [
+            "d. What right does",
+            "a. Appurtenant easement",
+            "b. Easement by necessity",
+            "c. Easement by prescription",
+            "d. Easement in gross"
+        ],
+        "answer": "d. Commercial easements such as this are called easements in gross. There are only servient \ntenements. There is no dominant tenement because there is no associated land ownership."
+    },
+    {
+        "question": "9. For as long as anyone can remember, neighbors have used a footpath over a waterfront parcel \nto get to the river. Recently, the current owner of the waterfront property erected a fence \nacross the path, blocking access. Which of these easements might the neighbors claim, which \nwould require the property owner to remove the fence?",
+        "choices": [
+            "a. Easement by necessity",
+            "b. Easement by prescription",
+            "c. Easement in gross",
+            "d. Appurtenant easement"
+        ],
+        "answer": "b. Long-time unauthorized usage may create legal rights leading to an easement by \nprescription. An easement in gross is a personal right, often used by utility companies. An \neasement by necessity could be imposed by court order to provide access to a landlocked \nproperty."
+    },
+    {
+        "question": "0. The holder of a life estate is called",
+        "choices": [
+            "a. an encumbrance.",
+            "b. a life tenant.",
+            "c. a remainderman.",
+            "d. a successor."
+        ],
+        "answer": "b. A life tenant is entitled to the rights of ownership and can benefit from both possession and \nordinary use, just as if the individual were a fee simple owner."
     }
 ];
 
