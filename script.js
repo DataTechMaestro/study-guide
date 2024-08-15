@@ -11,441 +11,205 @@ const resultsElement = document.getElementById('results');
 
 const questions = [
     {
-        "question": "1. A deceased homeowner left the family home to the deceased\u2019s second spouse with the \nprovision that when the surviving spouse dies, the home goes to a child by the deceased\u2019s first \nspouse. The second spouse owns a bundle of rights but does not own the right to",
+        "question": "1. All of these are ways to express a legal description EXCEPT",
         "choices": [
-            "a. will the property.",
-            "b. sell the property.",
-            "c. lease the property.",
-            "d. decorate the property."
+            "a. lot and block.",
+            "b. metes and bounds.",
+            "c. rectangular survey.",
+            "d. benchmarks."
         ],
-        "answer": "a. The second spouse owns a life estate and has the entire bundle of rights except the right to \nwill the property."
+        "answer": "d. A benchmark is a permanent reference point used as a reference for marking datums, not a \nmethod of legal description."
     },
     {
-        "question": "2. A freehold estate lasts for",
+        "question": "2. Air lots, condominium descriptions, and other vertical measurements may be computed from \nthe U.S. Geological Survey",
         "choices": [
-            "a. 99 years.",
-            "b. no longer than 100 years.",
-            "c. an indeterminable time.",
-            "d. the number of years specified when the owner takes possession."
+            "a. datum.",
+            "b. benchmark.",
+            "c. principal meridian.",
+            "d. base line."
         ],
-        "answer": "c. A freehold estate lasts for an indeterminable length of time, such as for a lifetime or forever."
+        "answer": "a. The U.S. Geological Survey datum is defined as the mean sea level at New York Harbor. A \nsurveyor uses the datum to determine the height of a structure or to establish the grade of a \nstreet."
     },
     {
-        "question": "3. A property owner conveyed a one-acre parcel of land to a preschool. The deed provided that \nthe property was to be used only as a playground; the former owner reserved a right of \nreentry. What kind of estate has been granted?",
+        "question": "3. Six acres of undeveloped property are sold for $2.25 per square foot. How much did the buyer \npay?",
         "choices": [
-            "a. Leasehold",
-            "b. Fee simple subject to a condition subsequent",
-            "c. Fee simple absolute",
-            "d. Curtesy"
+            "a. $466,560",
+            "b. $588,060",
+            "c. $612,360",
+            "d. $733,860"
         ],
-        "answer": "b. The owner has granted a fee simple subject to a condition subsequent. If, at some point in the \nfuture, the land is not used as a playground, the former owner or the former owner\u2019s heirs may \nexercise the right of re-entry by retaking physical possession of the land."
+        "answer": "b. The buyer paid $588,060:  \n43,560 square feet \u00d7 6 = 261,360 square feet  \n261,360 square feet \u00d7 $2.25 = $588,060"
     },
     {
-        "question": "4.  A notice is filed in the public record of pending litigation affecting the title to a property. This \nnotice is an example of",
+        "question": "4. Which township section number is directly north of Section 7?",
         "choices": [
-            "a. fee simple determinable",
-            "b. police power",
-            "c. an encroachment",
-            "d. a lis pendens"
+            "a. Section 1",
+            "b. Section 5",
+            "c. Section 6",
+            "d. Section 8"
         ],
-        "answer": "d. A lis pendens is a notice filed in the public record affecting the title to property or a claimed \nownership interest in it.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+        "answer": "c. A township is numbered in an S fashion: 1 through 6, right to left; then dropping down to 7 to \n12, left to right. Section 7 is directly south of Section"
     },
     {
-        "question": "5. A property owner gave land to a school \u201cso long as the land is used for only academic and \nrecreational purposes.\u201d The ownership interest granted here is called",
+        "question": "5. Which of these MOST accurately describes the dimensions of a quarter-section?",
         "choices": [
-            "a. an easement by prescription.",
-            "b. an encumbrance.",
-            "c. a bundle of rights.",
-            "d. a fee simple determinable."
+            "a. \u00bc mile by \u00bc mile",
+            "b. \u00bd mile by \u00bd mile",
+            "c. \u00bd mile by 1 mile",
+            "d. \u215b   mile by \u215b mile"
         ],
-        "answer": "d. The terms so long as, while, and during generally indicate creation of a fee simple \ndeterminable interest. The school obtains the full bundle of rights gained by a property \nowner, but one of the \u201csticks\u201d in that bundle has a special feature."
+        "answer": "b. A section is 1 square mile."
     },
     {
-        "question": "6. If the government acquires privately owned real estate through a condemnation suit, it is \nexercising its power of",
+        "question": "1. \nHow much will the buyer pay for the land?",
         "choices": [
-            "a. escheat.",
-            "b. reverter.",
-            "c. eminent domain.",
-            "d. defeasance."
+            "a. $3,000",
+            "b. $6,000",
+            "c. $12,000",
+            "d. $24,000"
         ],
-        "answer": "c. The right of the state to acquire private property for public use is eminent domain. The court \naction is called condemnation. Property escheats back to the state when it becomes \nownerless; that is, the owner dies leaving no heirs and no will."
+        "answer": "c. The buyer is willing to pay $12,000:  \n\u00bc \u00d7 640 = 160  \n160 \u00d7 \u00bc = 40  \n40 \u00d7 \u00bc = 10 acres \n10 acres \u00d7 $1,200 = $12,"
     },
     {
-        "question": "7. The owner of two acres of land sold one acre and reserved an easement appurtenant for \nentrance and exit over that acre to reach the public road. The buyer\u2019s land is",
+        "question": "7. In the past, a farm was typically a quarter section, or",
         "choices": [
-            "d. The buyer\u2019s land is",
-            "a. capable of being cleared of the easement if the buyer sells to a third party.",
-            "b. the servient tenement.",
-            "c. the dominant tenement.",
-            "d. subject to an easement in gross."
+            "a. 20 acres.",
+            "b. 80 acres.",
+            "c. 160 acres.",
+            "d. 320 acres."
         ],
-        "answer": "b. The seller\u2019s remaining parcel is the dominant tenement and benefits from the easement. The \neasement runs over the buyer\u2019s property, the servient tenement."
+        "answer": "c. A quarter of 640 acres is 160 acres."
     },
     {
-        "question": "8. A large undeveloped parcel of land borders a road on the lower edge. The owner sells the \nlower portion of the property and the buyer builds a home on it. Several years later, the owner \nsells the upper-portion of the property to a different buyer. The second buyer\u2019s property does \nnot border any road. For that buyer to gain access to the road, the buyer must claim an \neasement",
+        "question": "8. How many acres are contained in a parcel described as follows: The NE \u00bc of the NW \u00bc; the N \n\u00bd of the NW \u00bc, NE \u00bc, of Section 10?",
         "choices": [
-            "d. For that buyer to gain access to the road, the buyer must claim an",
-            "a. by necessity.",
-            "b. in gross.",
-            "c. by prescription.",
-            "d. by restriction."
+            "a. 40 acres",
+            "b. 60 acres",
+            "c. 70 acres",
+            "d. 74 acres"
         ],
-        "answer": "a. An easement by necessity could be created by court order to permit legal access to the second \nbuyer\u2019s property.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+        "answer": "b. There are two parcels in this description denoted by the semicolon (;).  \nThe first: \u00bc \u00d7 640 = 160 and \u00bc \u00d7 160 = 40 acres.  \nThe second: \u00bc \u00d7 640 = 160 and 160 \u00d7 \u00bc = 40 and 40 \u00d7 \u00bd = 20 acres.  \n40 acres + 20 acres = 60 acres.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
     },
     {
-        "question": "9. If the dominant estate merges with the servient estate, which of these is TRUE?",
+        "question": "9. The basic units of the rectangular survey system are the",
         "choices": [
-            "a. The easement remains in effect for the entire parcel.",
-            "b. The easement is suspended but cannot be terminated.",
-            "c. The easement is terminated.",
-            "d. The new owner must bring a suit seeking severance of the easement from the combined"
+            "a. base lines.",
+            "b. principal meridians.",
+            "c. ranges.",
+            "d. township squares."
         ],
-        "answer": "c. If the owner of the dominant tenement also becomes owner of the servient tenement (or vice \nversa), the easement terminates. Because the same person owns both properties, there is no \nneed for the easement to exist."
+        "answer": "d. Township squares are the basic units of the rectangular survey system. Principal meridians \nand base lines are the two sets of intersecting lines in the system. Ranges are the 6-mile strips \nof land on either side of a principal meridian."
     },
     {
-        "question": "0. If the homeowner has an outstanding mortgage balance of $135,000 and credit \ncard debts amounting to $24,360, how much is protected by the homestead exemption?",
+        "question": "0. A metes-and-bounds description is required in rectangular survey system descriptions when",
         "choices": [
-            "a. $640",
-            "b. $2,140",
-            "c. $20,000",
-            "d. $26,500"
+            "a. quarter sections can be used to describe the tract.",
+            "b. describing an irregular tract.",
+            "c. a tract can be described by sections.",
+            "d. a tract follows the lot or block lines of a recorded subdivision or section."
         ],
-        "answer": "c. The homestead exemption is $20,"
+        "answer": "b. Metes-and-bounds descriptions within the rectangular survey system usually occur when \ndescribing an irregular tract, when a tract is too small to be describe by quarter-sections, or \nwhen a tract does not follow the lot or block lines of a recorded subdivision or section, \nquarter-section lines, or other fractional section lines."
     },
     {
-        "question": "1. In some states, a husband cannot sell property unless the wife also signs the deed. The wife\u2019s \ninterest is called",
+        "question": "1. What is the square footage of this property described by the metes-and-bounds method? \n \n Beginning at a point on the southerly side of Smith Street, 200 feet easterly from the corner \nformed by the intersection of the southerly side of Smith Street and the easterly side of \nJohnson Street; then east 200 feet; then south 100 feet; then west 200 feet; then north 100 feet \nto the POB.",
         "choices": [
-            "d. The wife\u2019s",
-            "a. personal property rights.",
-            "b. homestead rights.",
-            "c. curtesy rights.",
-            "d. dower rights."
+            "a. 5,000 square feet",
+            "b. 10,000 square feet",
+            "c. 15,000 square feet",
+            "d. 20,000 square feet"
         ],
-        "answer": "d. A wife\u2019s interest in her deceased husband\u2019s property is dower, a husband\u2019s interest is curtesy, \nand protection for some part of the family home is called homestead rights."
+        "answer": "d. The property is 200\u2019 \u00d7 100\u2019 = 20,000 square feet."
     },
     {
-        "question": "2. The state\u2019s authority to enact legislation to protect the public is passed through to \nmunicipalities and counties through",
+        "question": "2. The end of a metes-and-bounds land description is always a",
         "choices": [
-            "a. police power.",
-            "b. enabling acts.",
-            "c. licensing laws.",
-            "d. processing papers."
+            "a. monument.",
+            "b. benchmark.",
+            "c. point of beginning.",
+            "d. base line."
         ],
-        "answer": "b. The state passes police power to counties and municipalities through enabling acts. Licensing \nlaws are an example of police power.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
+        "answer": "c. A metes-and-bounds description must always begin and end at the point of beginning, thus \nenclosing the described property.   \n \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
     },
     {
-        "question": "3. The state requires enough land to build a four-lane highway. For the state to acquire the \nneeded land, the state must reimburse every property owner",
+        "question": "3. The lot-and-block system starts with the preparation of",
         "choices": [
-            "a. the value of the land but not improvements.",
-            "b. the estimated future value of the property after completion of the highway.",
-            "c. for the amount that the property owner paid for the land.",
-            "d. for the fair market value of the property taken."
+            "a. a subdivision plat.",
+            "b. a range map.",
+            "c. a survey.",
+            "d. an air lot."
         ],
-        "answer": "d. To acquire private property through eminent domain, the state must prove that the purchase \nis for public good, pay a fair price, and allow the property owner full rights to appeal. The \nprice may or may not reflect what the owner had actually paid for the property."
+        "answer": "a. The lot-and-block system starts with the preparation of a subdivision plat by a licensed \nsurveyor or an engineer.   \nRefer to the example plat for Honeysuckle Hills Subdivision when answering Questions 14 \nthrough"
     },
     {
-        "question": "4. A patient died in a nursing home. The deceased left no heirs and had not written a will. What \nhappens to the deceased\u2019s $250,000 estate?",
+        "question": "4. Which lot in Block A has the MOST frontage on Jasmine Lane?",
         "choices": [
-            "a. It escheats to the state or county.",
-            "b. The nursing home gets to keep it.",
-            "c. It will be split between the nursing home and the county.",
-            "d. It can be paid over to the deceased\u2019s church."
+            "a. 1",
+            "b. 2",
+            "c. 7",
+            "d. 11"
         ],
-        "answer": "a. Because the deceased left no will and there are no heirs, the $250,000 is essentially ownerless. \nIt reverts to the state or county."
+        "answer": "c. In Block A, Lot 7 has the longest frontage with 160 feet.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
     },
     {
-        "question": "5. Which of these is defined as a claim, charge, or liability that attaches to real estate?",
+        "question": "5. How many lots have easements?",
         "choices": [
-            "a. Lien",
-            "b. Easement",
-            "c. Deed restriction",
-            "d. Encumbrance"
+            "a. 1",
+            "b. 3",
+            "c. 4",
+            "d. 6"
         ],
-        "answer": "d. An encumbrance is a claim, charge, or liability that attaches to real estate, such as a lien, \neasement, or deed restriction."
+        "answer": "c. Four lots have easements: Lots, 1, 14, and 15 on Block A and Lot 15 on Block B."
     },
     {
-        "question": "6. Which of these must exist for an appurtenant easement to exist?",
+        "question": "6. Which road or roads run east and west?",
         "choices": [
-            "a. Two adjacent parcels, different owners",
-            "b. Two adjacent parcels, one owner",
-            "c. Landlocked property that requires passage to the street",
-            "d. Long-time unauthorized usage"
+            "a. Wolf and Jasmine",
+            "b. Carney and Goodrich",
+            "c. Wolf only",
+            "d. Goodrich only"
         ],
-        "answer": "a. An easement appurtenant must have two owners and two parcels of land. A landlocked parcel \nwould require an easement by necessity; long-time unauthorized usage would lead to an \neasement by prescription."
+        "answer": "a. Wolf and Jasmine run east and west."
     },
     {
-        "question": "7. What are deed restrictions?",
+        "question": "7. Which of these lots has the LEAST street exposure?",
         "choices": [
-            "a. Public land restrictions",
-            "b. Illegal land restrictions",
-            "c. Private agreements affecting the use of the land",
-            "d. Informal agreements between neighbors",
+            "a. Lot 3, Block A",
+            "b. Lot 15, Block B",
+            "c. Lot 9, Block A",
+            "d. Lot 10, Block B"
+        ],
+        "answer": "a. Lot 3, Block A with 30 feet has the least street exposure."
+    },
+    {
+        "question": "8. Beginning at the intersection of the west line of Carney Street and the north line of Wolf Road, \nrunning west 140 feet, then north 120 feet, then north 50 degrees east 120 feet, then following \nthe southeasterly curvature of the south line of Jasmine Lane for 100 feet, then south 120 feet \nto POB. \n \n To which lot does this description refer?",
+        "choices": [
+            "a. Lot 15, Block B",
+            "b. Lot 8, Block A",
+            "c. Lot 7, 8, and 9, Block A",
+            "d. Lot 8 and 9, Block A"
+        ],
+        "answer": "b. The description refers to Lot 8, Block A."
+    },
+    {
+        "question": "9. If lot 13 and lot 14, Block A were combined into one parcel, how many square feet would it \ncontain?",
+        "choices": [
+            "a. 1,020",
+            "b. 19,800",
+            "c. 21,600",
+            "d. 22,800",
             "c."
         ],
-        "answer": "c. Deed restrictions are private agreements written into the deed and are privately enforced. \nExamples of public restrictions include zoning ordinances and building codes."
+        "answer": "c. The combined parcel would have 21,600 square feet. The parcel would be 180\u2019 \u00d7 120\u2019 = 21,600 \nsquare feet."
     },
     {
-        "question": "8. The electric company has the right to extend its wires over 50 parcels of land. What right does \nthe electric company have?",
+        "question": "0. If a buyer is willing to pay $3 per square foot for lot 10, Block A, how much would the buyer be \nwilling to pay for the land?",
         "choices": [
-            "d. What right does",
-            "a. Appurtenant easement",
-            "b. Easement by necessity",
-            "c. Easement by prescription",
-            "d. Easement in gross"
+            "a. $20,600",
+            "b. $24,000",
+            "c. $28,000",
+            "d. $32,400"
         ],
-        "answer": "d. Commercial easements such as this are called easements in gross. There are only servient \ntenements. There is no dominant tenement because there is no associated land ownership."
-    },
-    {
-        "question": "9. For as long as anyone can remember, neighbors have used a footpath over a waterfront parcel \nto get to the river. Recently, the current owner of the waterfront property erected a fence \nacross the path, blocking access. Which of these easements might the neighbors claim, which \nwould require the property owner to remove the fence?",
-        "choices": [
-            "a. Easement by necessity",
-            "b. Easement by prescription",
-            "c. Easement in gross",
-            "d. Appurtenant easement"
-        ],
-        "answer": "b. Long-time unauthorized usage may create legal rights leading to an easement by \nprescription. An easement in gross is a personal right, often used by utility companies. An \neasement by necessity could be imposed by court order to provide access to a landlocked \nproperty."
-    },
-    {
-        "question": "0. The holder of a life estate is called",
-        "choices": [
-            "a. an encumbrance.",
-            "b. a life tenant.",
-            "c. a remainderman.",
-            "d. a successor."
-        ],
-        "answer": "b. A life tenant is entitled to the rights of ownership and can benefit from both possession and \nordinary use, just as if the individual were a fee simple owner."
-    },
-    {
-        "question": "1. Which of these cannot take title as a joint tenant with right of survivorship?",
-        "choices": [
-            "a. Spouses",
-            "b. Two friends who are business partners",
-            "c. Two relatives who share a house",
-            "d. A corporation"
-        ],
-        "answer": "d. Because a corporation continues indefinitely until terminated by legal action, a corporation    \nmay never take title as a joint tenant."
-    },
-    {
-        "question": "2. When two or more individuals decide to buy a property together, the result is a form of",
-        "choices": [
-            "a. cooperation.",
-            "b. co-ownership.",
-            "c. community effort.",
-            "d. joint venture."
-        ],
-        "answer": "b. When two or more people buy property together, it is called co-ownership. A joint venture is a \nform of partnership in which two or more people carry out a single business project."
-    },
-    {
-        "question": "3.  Three brothers bought a farm together, and the deed listed only each of their names. What \nform of ownership are they presumed to have taken?",
-        "choices": [
-            "a. Tenancy by the entireties",
-            "b. Joint tenancy with right of survivorship",
-            "c. Tenancy in common",
-            "d. In severalty"
-        ],
-        "answer": "c. The brothers are presumed to be tenants in common because they did not take title as joint \ntenants with right of survivorship. Joint tenancy requires specific language. Severalty \nownership indicates one owner."
-    },
-    {
-        "question": "4. What form of ownership is employed when one person transfers ownership to someone else \nto hold and manage for a third person?",
-        "choices": [
-            "a. Joint venture",
-            "b. Joint tenancy",
-            "c. Trust",
-            "d. Severalty"
-        ],
-        "answer": "c. A trust is a device by which one person transfers ownership of property to someone else to \nhold or manage for the benefit of a third party. Severalty indicates one owner. Joint tenancy \nis a form of ownership in which, as joint owners die, the surviving owners acquire the \ndeceased tenant\u2019s interest.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
-    },
-    {
-        "question": "5. Two people, each of whom has children from a previous marriage, are now marrying each other. \nThey ask a real estate professional for advice about how to take title. What should the real \nestate professional suggest?",
-        "choices": [
-            "a. Tenancy in common, so that each one-half interest would go to each spouse\u2019s children",
-            "b. Joint tenancy to protect each other, so that if one dies, the other gets the house",
-            "c. That they wait until the real estate professional finds out how best to advise them",
-            "d. That they consult with an attorney"
-        ],
-        "answer": "d. Because the choice of ownership affects the ability to transfer the real estate, has tax \nimplications, and decides rights to future claims, real estate professionals should tell their \nclients to discuss the issue with an attorney. Real estate professionals are not permitted to \ngive legal advice."
-    },
-    {
-        "question": "5. What kind of provision is this?",
-        "choices": [
-            "a. Testamentary trust",
-            "b. Living trust",
-            "c. Land trust",
-            "d. Trust deed"
-        ],
-        "answer": "a. A testamentary trust is established by will after the trustor\u2019s death. A living trust is \nestablished during the trustor\u2019s lifetime. Real estate is the only asset in a land trust. A deed of \ntrust (also called a trust deed) is a financing instrument."
-    },
-    {
-        "question": "7. What kind of ownership do the horizontal property acts regulate?",
-        "choices": [
-            "a. Cooperatives",
-            "b. Condominiums",
-            "c. Time-sharing",
-            "d. Planned unit development"
-        ],
-        "answer": "b. Condominiums are regulated by a horizontal property act in most states."
-    },
-    {
-        "question": "8. Shareholders in a cooperative receive shares of stock that entitle them to a",
-        "choices": [
-            "a. common element lease.",
-            "b. trust deed.",
-            "c. proprietary lease.",
-            "d. corporate deed."
-        ],
-        "answer": "c. The proprietary lease is part of the ownership of the cooperative stock and gives the owner \nthe right to occupy a specific apartment. Common elements refer to the property owned \njointly by condominium owners.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
-    },
-    {
-        "question": "9. Membership camping is similar to",
-        "choices": [
-            "a. cooperative ownership.",
-            "b. condominium ownership.",
-            "c. planned use development.",
-            "d. time-share use."
-        ],
-        "answer": "d. The owner of membership camping purchases the right to use the developer\u2019s facilities, which \nis similar to a time-share. The owner may not be limited to a specific time, as is the case in a \ntypical time-share arrangement, however."
-    },
-    {
-        "question": "0. In a large high-rise condominium, each unit is owned by individual owners. The elevators, \nparking garage, and swimming pool are called",
-        "choices": [
-            "a. community property.",
-            "b. separate property.",
-            "c. common elements.",
-            "d. proprietary elements."
-        ],
-        "answer": "c. The parts of a property that condominium owners own together are the common elements. \nCommunity property is a system of property ownership based on the theory that each spouse \nhas an equal interest in property acquired during the marriage, which is distinct from \nproperty acquired by a spouse before marriage, making it that spouse\u2019s separate property."
-    },
-    {
-        "question": "1. Two individuals own an apartment building as joint tenants, sharing equally in the expenses \nand profits. If one of the co-owners sells that interest by signing and delivering a deed to a \nbuyer, which of these statements is TRUE?",
-        "choices": [
-            "a. The buyer will become a joint tenant with the remaining owner.",
-            "b. The buyer and the remaining owner will be tenants in common.",
-            "c. The buyer will be a tenant in common with the remaining owner and a joint tenant with",
-            "d. The conveyance will be invalid; the two individuals will remain joint tenants."
-        ],
-        "answer": "b. A co-owner can sell whatever the co-owner owns; however, once the unities of time, title, and \ninterest are destroyed, as they are when a joint owner sells that interest, there can no longer \nbe a joint tenancy."
-    },
-    {
-        "question": "2. In February, a seller conveyed an undivided one-half interest in a parcel of land to a buyer. In \nMarch, the seller conveyed the remaining one-half interest to a different buyer. The deed to \nthe second buyer included this statement: \u201cThis buyer is to be a joint tenant with the buyer of \nthe other half-interest in the parcel.\u201d Both deeds were recorded. Based on these facts, which of \nthese statements is TRUE?",
-        "choices": [
-            "d. Based on these facts, which of",
-            "a. The second buyer and first buyer hold title to the land as joint tenants under the terms of",
-            "b. The second buyer and first buyer own the land by partition.",
-            "c. The second buyer and first buyer are tenants in common.",
-            "c.",
-            "d. The second buyer owns a half-interest in the land as a joint tenant; the first buyer owns a"
-        ],
-        "answer": "c. Because there are two deeds made at different times, the four unities of joint tenancy have not \nbeen met. This means that the second buyer and first buyer are tenants in common."
-    },
-    {
-        "question": "3. Three people own a large parcel of undeveloped land in joint tenancy. One of them wants to \nbuild a shopping center on the property, while the other two want to use it as an organic farm. \nThe would-be developer tries to buy the other tenants\u2019 interests, but they refuse to sell. Which \nof these is the developer\u2019s BEST option?",
-        "choices": [
-            "a. File a suit for partition",
-            "b. Begin building a shopping center on one-third of the property",
-            "c. Wait for the other two to die",
-            "d. File a suit to quiet title"
-        ],
-        "answer": "a. When co-owners cannot come to an agreement, they must file for partition in court. The \nproperty will not physically be divided; rather, one or more will be given the opportunity to \nbuy the others out. If this is not possible, then the property will be sold, and the proceeds will \nbe divided appropriately."
-    },
-    {
-        "question": "4. Fee simple ownership of a cottage in a lakefront community includes an undivided percentage \ninterest in a parking lot, a golf course, and a swimming pool, all located in the development. \nBased on these facts alone, the ownership interest is probably BEST described as a",
-        "choices": [
-            "a. time-share estate.",
-            "b. time-share use.",
-            "c. condominium.",
-            "d. cooperative."
-        ],
-        "answer": "c. It appears that this is condominium ownership because it includes ownership of a cottage as \nwell as an interest in the common elements. Cooperative ownership is ruled out because the \nownership does not have a proprietary lease. It is not a time-share, because it includes more \nthan the right to use the property at a specific time."
-    },
-    {
-        "question": "0. N contributes $30,000 and agrees to run the business, which \nthe owners call \u201cProperty Group Partners.\u201d Neither M nor R has any right to participate in the \noperation of the venture. Based on these facts, what type of business organization have M, R, \nand N established?",
-        "choices": [
-            "a. Joint venture",
-            "b. Limited partnership",
-            "c. General partnership",
-            "d. Limited liability company"
-        ],
-        "answer": "b. A limited partnership limits the participation of the silent partners, but also limits their \nliability. A general partnership would require that all be equally involved in running the \noperation and would expose all to liability.   \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
-    },
-    {
-        "question": "6. Based on the facts in the previous question, if the building on the property collapses, resulting \nin injury and property damage worth $275,000, what will be M\u2019s liability?",
-        "choices": [
-            "a. None",
-            "b. $50,000",
-            "c. $91,667",
-            "d. $100,000"
-        ],
-        "answer": "b. Each of the limited partners is limited in liability to the $50,000 amount of the original \ninvestment."
-    },
-    {
-        "question": "7. A joint tenancy requires",
-        "choices": [
-            "a. unity of relationship.",
-            "b. unity of possession.",
-            "c. unity of purpose.",
-            "d. unity of name."
-        ],
-        "answer": "b. To create joint tenancy ownership, four unities are required: possession, interest, time, and \ntitle."
-    },
-    {
-        "question": "8. A characteristic of a tenancy by the entirety is that",
-        "choices": [
-            "a. title may be conveyed by a deed signed by either party.",
-            "b. a spouse may dispose of their interest by will.",
-            "c. the spouses can agree to own unequal interests.",
-            "d. the surviving spouse automatically owns the property acquired during the marriage."
-        ],
-        "answer": "d. Under tenancy by the entirety, title may be conveyed only by a deed signed by both parties, \neach spouse owns an equal, undivided interest in the property, and the surviving spouse \nautomatically becomes the owner upon the death of the other."
-    },
-    {
-        "question": "9. A trust is created to pay for a student\u2019s college education. An attorney makes payments on \nbehalf of the student directly to the college. Based on these facts, which of these statements \nBEST characterizes the relationships among the parties to the trust?",
-        "choices": [
-            "a. The attorney is the trustor, the student is the beneficiary, and the creator of the trust is the",
-            "b. The creator of the trust is the trustor, the college is the beneficiary, and the attorney is the",
-            "c. The creator of the trust is the trustor, the student is the beneficiary, and the attorney is the",
-            "d. The creator of the trust is the trustor, the attorney is the trustee, and the college is the"
-        ],
-        "answer": "c. The creator of the trust is the owner-trustor, the student is the beneficiary, and the attorney is \nthe trustee, the person who manages the trust.   \n \n\nModern Real Estate Practice 21st Edition \n \nRhode Island Association of REALTORS\u00ae  \n \n\u00a92022 Kaplan, Inc."
-    },
-    {
-        "question": "0. A company is a legal entity, created by charter under the laws of the state. The company is \nmanaged and operated by a board and is permitted to buy and sell real estate. When one of its \ndirectors dies, the company continues to operate. Because of its structure, the company\u2019s \nincome is subject to double taxation. The company is BEST described as a",
-        "choices": [
-            "a. partnership.",
-            "b. condominium trust.",
-            "c. corporation.",
-            "d. limited liability company."
-        ],
-        "answer": "c. The corporation would not be affected if one of the directors dies. The most important fact \nprovided is the double taxation that applies to corporations."
-    },
-    {
-        "question": "1. When a corporation takes complete ownership of a property, the ownership is in",
-        "choices": [
-            "a. joint tenancy.",
-            "b. tenancy in common.",
-            "c. partnership.",
-            "d. severalty."
-        ],
-        "answer": "d. A corporation is treated as a person and may hold ownership in severalty."
-    },
-    {
-        "question": "2.   In a tenancy in common, if the fractions of ownership are not stated in the deed, how are they \ndetermined?",
-        "choices": [
-            "a. The tenants need a judicial decision to determine the fractional shares.",
-            "b. The tenants are presumed to hold equal shares.",
-            "c. The tenants settle the issue through binding arbitration.",
-            "d. The tenants must terminate the tenancy in common through partition."
-        ],
-        "answer": "b. The deed creating a tenancy in common may or may not state the fractional interest held by \neach co-owner. If no fractions are stated, the tenants are presumed to hold equal shares."
-    },
-    {
-        "question": "3. In a land trust, the beneficiary is usually also the",
-        "choices": [
-            "a. trustor.",
-            "b. trustee.",
-            "c. fiduciary.",
-            "d. attorney in fact."
-        ],
-        "answer": "a. In a land trust, the beneficiary is usually also the trustor. The beneficiary retains management \nand control of the real property and has the right of possession and the right to any income."
+        "answer": "d. The buyer would pay $32,400:"
     }
 ];
 
